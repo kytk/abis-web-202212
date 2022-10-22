@@ -1,31 +1,31 @@
 #!/bin/bash
 # ABiS チュートリアル用スクリプト
-# 2021年12月, 2022年1月用のLin4Neuroを入手します
+# 2022年12月, 2023年1月用のLin4Neuroを入手します
 
 #####
 # 準備のために使ったコマンド
-# openssl md5 L4N-2004-abis-20211110.ova > L4N-2004-abis-20211110.ova.md5
-# split -n 16 -d L4N-2004-abis-20211110.ova L4N-2004-abis-split-
-# for f in L4N-2004-abis-split-*; do openssl md5 $f > ${f}.md5; done
+# openssl md5 L4N-2204-ABiS-20221022.ova > L4N-2204-ABiS-20221022.ova.md5
+# split -n 30 -d L4N-2204-ABiS-20221022.ova L4N-2204-ABiS-split-
+# for f in L4N-2204-ABiS-split-*; do openssl md5 $f > ${f}.md5; done
 # sftp user@ftpsite
 # cd psy-neuroimaging
-# mkdir L4N-2004-abis-20211110-split
-# put L4N-2004-abis-split-*
+# mkdir L4N-2204-ABiS-20221022-split
+# put L4N-2204-ABiS-split-*
 # cd ../L4N #(psy-neuroimaging/L4N)
-# put L4N-2004-abis-20211110*
+# put L4N-2204-ABiS-20221022*
 #####
 
 #set -x
 
 cd ~/Downloads
-mkdir L4N-2004-abis-20211110
-cd L4N-2004-abis-20211110
+mkdir L4N-2204-ABiS-20221022
+cd L4N-2204-ABiS-20221022
 
 # variable ################
-baseurl="https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2004-abis-20211110-split"
-base="L4N-2004-abis-split"
-L4N="L4N-2004-abis-20211110.ova"
-L4Nmd5="https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N/L4N-2004-abis-20211110.ova.md5"
+baseurl="https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split"
+base="L4N-2204-ABiS-split"
+L4N="L4N-2204-ABiS-20221022.ova"
+L4Nmd5="https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N/L4N-2204-ABiS-20221022.ova.md5"
 ###########################
 
 echo "チュートリアル用のLin4Neuroをダウンロードします"
@@ -68,7 +68,7 @@ done
 echo "正しく${L4N}が生成されました"
 
 #Delete temporary files
-[ -e L4N-2004-abis-split-00 ] && rm ${base}-*
+[ -e L4N-2204-ABiS-split-00 ] && rm ${base}-*
 
 echo ""
 echo "L4Nの準備が完了しました。"
