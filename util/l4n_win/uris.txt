@@ -1,122 +1,120 @@
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-00
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-00
   check-integrity=true
   checksum=md5=8bda76f77279cbe11f38661c5da5ccc5
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-01
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-01
   check-integrity=true
   checksum=md5=7046fe9b0af538bedf9ea9643fabedff
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-02
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-02
   check-integrity=true
   checksum=md5=88ac73e179dd84934037e732cd378ad7
   
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-03
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-03
   check-integrity=true
   checksum=md5=1a24a36a254e84ed3cadf694ee3a15e1
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-04
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-04
   check-integrity=true
   checksum=md5=fc6d631ff0a0cb9a2208d5ee5018e2fe
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-05
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-05
   check-integrity=true
   checksum=md5=5ccf246fd877c215bbfa4a236fa08c3a
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-06
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-06
   check-integrity=true
   checksum=md5=a56819faec557e4b102ef8d535fffd00
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-07
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-07
   check-integrity=true
   checksum=md5=eda78cc2723a24019caa0f67ee998cc8
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-08
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-08
   check-integrity=true
   checksum=md5=f3e1db93ea12ca30b5077b242a6ccabc
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-09
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-09
   check-integrity=true
   checksum=md5=b8f9e56aae0a899808926a12a2b8c971
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-10
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-10
   check-integrity=true
   checksum=md5=d4d8b1e40177f3e6e155e4818d905628
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-11
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-11
   check-integrity=true
   checksum=md5=59f975153836e45040e583a52d3037b2
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-12
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-12
   check-integrity=true
   checksum=md5=2f150446c4765b06ce3002b341a86684
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-13
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-13
   check-integrity=true
   checksum=md5=a3b30d5ac52eb0cea0e1737b993bc577
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-14
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-14
   check-integrity=true
   checksum=md5=927ea5a5b88aa40e6498c463348adccd
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-15
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-15
   check-integrity=true
   checksum=md5=be4573277976037146a175e46ce26d77
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-16
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-16
   check-integrity=true
   checksum=md5=e353697c8c562c0b93dc9294ccb09b77
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-17
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-17
   check-integrity=true
   checksum=md5=f8a668fb4b075e3d25adbc806167c1e9
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-18
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-18
   check-integrity=true
   checksum=md5=c10804e6a416d16683a4df9bc7b993d6
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-19
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-19
   check-integrity=true
   checksum=md5=f9de1e3369c3328b29c67f34fe51e228
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-20
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-20
   check-integrity=true
   checksum=md5=2d63bb077ffc7e5369688864522c1735
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-21
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-21
   check-integrity=true
   checksum=md5=12eec478719407de67e267a44b237ae4
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-22
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-22
   check-integrity=true
   checksum=md5=1dd0564e6af2431033ecc1cfcd21dbfb
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-23
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-23
   check-integrity=true
   checksum=md5=be51eae4ee4cce6dda9f2cb6a5a41cd8
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-24
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-24
   check-integrity=true
   checksum=md5=d8d53dbe7923b40c76fd40d66425d278
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-25
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-25
   check-integrity=true
   checksum=md5=dc4510ab7062960c42472785a77ba615
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-26
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-26
   check-integrity=true
   checksum=md5=7322c770752ced635b5214649153298b
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-27
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-27
   check-integrity=true
   checksum=md5=61fddd2cc953a220cfb803a70efbe6fe
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-28
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-28
   check-integrity=true
   checksum=md5=369c0c317f1bb44fef5d3ee8c793c524
 
-https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N-2204-ABiS-20221022-split/L4N-2204-ABiS-split-29
+https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split/L4N-2204-ABiS-split-29
   check-integrity=true
   checksum=md5=fe126c20460914f76a3bf947108768d3
-  
-
 
