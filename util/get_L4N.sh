@@ -20,7 +20,7 @@
 #set -x
 
 cd ~/Downloads
-mkdir L4N-2204-ABiS-20221022
+[ ! -d L4N-2204-ABiS-20221022 ] && mkdir L4N-2204-ABiS-20221022
 cd L4N-2204-ABiS-20221022
 
 # variable ################
