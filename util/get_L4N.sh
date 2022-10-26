@@ -4,32 +4,37 @@
 
 #####
 # 準備のために使ったコマンド
-# openssl md5 L4N-2204-ABiS-20221025.ova > L4N-2204-ABiS-20221025.ova.md5
-# split -n 30 -d L4N-2204-ABiS-20221025.ova L4N-2204-ABiS-split-
-# for f in L4N-2204-ABiS-split-*; do openssl md5 $f > ${f}.md5; done
+# cd ~/Documents/L4N-2204-ABIS-20221026
+# vm=L4N-2204-ABIS-20221026.ova
+# chmod 644 $vm
+# openssl md5 $vm > ${vm}.md5
+# split -n 30 -d ${vm} L4N-2204-ABIS-split-
+# for f in L4N-2204-ABIS-split-*; do openssl md5 $f > ${f}.md5; done
+#
 # sftp user@ftpsite
 # cd www/klab/l4n-abis
-# mkdir L4N-2204-ABiS-split
-# cd L4N-2204-ABiS-split
-# put L4N-2204-ABiS-split-*
-# cd .. #www/klab/l4n-abis
-# put L4N-2204-ABiS-20221025*
+# put L4N-2204-ABIS-20221026*
+# mkdir L4N-2204-ABIS-split
+# cd L4N-2204-ABIS-split
+# put L4N-2204-ABIS-split-*
 #####
 
 #For Debug
 #set -x
 
-cd ~/Downloads
-[ ! -d L4N-2204-ABiS-20221025 ] && mkdir L4N-2204-ABiS-20221025
-cd L4N-2204-ABiS-20221025
-
 # variable ################
-baseurl="https://www.nemotos.net/l4n-abis/L4N-2204-ABiS-split"
-base="L4N-2204-ABiS-split"
-L4N="L4N-2204-ABiS-20221025.ova"
-L4Nmd5="MD5(L4N-2204-ABiS-20221025.ova)= ed44973ef4690e839547037986996ce8"
+baseurl="https://www.nemotos.net/l4n-abis/L4N-2204-ABIS-split"
+base="L4N-2204-ABIS-split"
+L4N="L4N-2204-ABIS-20221026.ova"
+L4Ndir="L4N-2204-ABIS-20221026"
+L4Nmd5="MD5(L4N-2204-ABIS-20221026.ova)= ded1b4e7852083459b7514db11545aad"
 nfiles=29 # n-1
 ###########################
+
+cd ~/Downloads
+[ ! -d ${L4Ndir} ] && mkdir ${L4Ndir}
+cd ${L4Ndir}
+
 
 echo "チュートリアル用のLin4Neuroをダウンロードします"
 echo ""
@@ -71,11 +76,11 @@ done
 echo "正しく${L4N}が生成されました"
 
 #Delete temporary files
-[ -e L4N-2204-ABiS-split-00 ] && rm ${base}-*
+[ -e ${base}-00 ] && rm ${base}-*
 
 echo ""
 echo "L4Nの準備が完了しました。"
-echo "ダウンロードの${L4N%.ova}フォルダの中にある${L4N}をVirtualBoxにインポートしてください"
+echo "ダウンロードの${L4Ndir}フォルダの中にある${L4N}をVirtualBoxにインポートしてください"
 sleep 10
 
 exit
