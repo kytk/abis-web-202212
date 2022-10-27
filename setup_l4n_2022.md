@@ -74,11 +74,12 @@
 
 	- ターミナルに以下をタイプします。
 
-	```
-	cd ~/Downloads
+        ```
+        cd ~/Downloads
         cd l4n_mac
-	bash get_L4N.sh
-	```
+        bash get_L4N.sh
+        ```
+
 
         - そうすると、ターミナルが起動し、ダウンロードがはじまります
 
@@ -108,7 +109,7 @@
 
 - インストール後、VirtualBoxを起動します
 
-    ![セットアップ後画像](img/vb01.png)
+    ![セットアップ後画像](img/vb7_01.png)
     
 <a id="anchorC"></a>
 
