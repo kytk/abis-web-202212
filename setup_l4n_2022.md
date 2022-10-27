@@ -5,7 +5,7 @@
 - [はじめに](#anchor0)
 - [事前準備](#anchor1)
     - [A. チュートリアル用Lin4Neuro仮想アプライアンスのダウンロード (2-3時間)](#anchorA)
-    - [B. VirtualBox 7.0以降 のインストール (10分)](#anchorB)
+    - [B. VirtualBox 7.0.2以降 のインストール (10分)](#anchorB)
     - [C. Lin4Neuro仮想アプライアンスのインポート (15分)](#anchorC)
     - [D. 仮想マシンの設定 (5分)](#anchorD)
     - [E. Lin4Neuroの起動と設定 (10分)](#anchorE)
@@ -46,7 +46,7 @@
 
     - Windows10
 
-        - [Windows用ダウンローダー](https://github.com/kytk/abis-202212-web/raw/master/util/l4n_win.zip)をダウンロードします
+        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_win.zip)をダウンロードします
 
         - l4n_win.zip を展開します
 
@@ -56,9 +56,9 @@
 
         - 右下に「実行」ボタンが出ますので、実行をクリックします
 
-        - コマンドプロンプトの画面が立ち上がり、aria2cというプログラムによるダウンロードが始まります
+        - コマンドプロンプトの画面が立ち上がり、ダウンロードが始まります
 
-        - ダウンロードが完了すると、L4N-2204-ABiS-20221022 フォルダの中に L4N-2204-ABiS-20221022.ova というファイルが生成されます
+        - ダウンロードが完了すると、L4N-2204-ABIS-20221026 フォルダの中に L4N-2204-ABIS-20221026.ova というファイルが生成されます
 
         ![PC保護](img/win_get_l4n1.png)
 
@@ -68,7 +68,7 @@
  
     - macOS
 
-        - [macOS用ダウンローダー](https://github.com/kytk/abis-202212-web/raw/master/util/get_L4N.sh)をダウンロードします
+        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_mac.zip)をダウンロードします
 
         - ターミナルを起動します
 
@@ -76,34 +76,35 @@
 
 	```
 	cd ~/Downloads
+        cd l4n_mac
 	bash get_L4N.sh
 	```
 
         - そうすると、ターミナルが起動し、ダウンロードがはじまります
 
-        - ダウンロードが完了すると、L4N-2204-ABiS-20221022 フォルダの中に L4N-2204-ABiS-20221022.ova というファイルが生成されます
+        - ダウンロードが完了すると、L4N-2204-ABIS-20221026 フォルダの中に L4N-2204-ABIS-20221026.ova というファイルが生成されます
 
         ![分散ダウンロード](img/mac_get_l4n4.png)
  
 
 - 一括ダウンロード: 十分にネットワークが安定している方は、以下からダウンロードしてください。30GBありますのでダウンロードには2〜3時間かかります。ネットワークが細い方は、上の分割ダウンロードを選択してください
 
-    - [L4N-2204-ABiS-20221022.ovaのダウンロード](http://www.nemotos.net/l4n-abis/L4N-2204-ABiS-20221022.ova){:target="_blank"}
+    - [L4N-2204-ABIS-20221026.ovaのダウンロード](http://www.nemotos.net/l4n-abis/L4N-2204-ABIS-20221026.ova){:target="_blank"}
 
-    - L4N-2204-ABiS-20221022.ovaのmd5値は、`4334c443638c0d432368356122071381` になります。ファイルサイズの検証にお使いください
+    - L4N-2204-ABIS-20221026.ovaのmd5値は、`ded1b4e7852083459b7514db11545aad` になります。ファイルサイズの検証にお使いください
 
-        - macOSならば、`openssl md5 L4N-2204-ABiS-20221022.ova` で確認できます
-        - Windowsならば、PowerShellから、`Get-FileHash -Algorithm md5 L4N-2204-ABiS-20221022.ova` で確認できます
+        - macOSならば、`openssl md5 L4N-2204-ABIS-20221026.ova` で確認できます
+        - Windowsならば、PowerShellから、`Get-FileHash -Algorithm md5 L4N-2204-ABIS-20221026.ova` で確認できます
 
 <a id="anchorB"></a>
 
-### B. VirtualBox 7.0以降 のインストール (所要時間約10分)
+### B. VirtualBox 7.0.2以降 のインストール (所要時間約10分)
 
-チュートリアルでは、**<span style="color: red; ">VirtualBox 7.0以降</span>**の上で Lin4Neuro を動作させます。最新版の Lin4Neuro は、VirtualBox 7.0 で最適化されているため、前のバージョンのVirtualBoxを使用の方は**必ず7.0にアップグレードしてください。
+チュートリアルでは、**<span style="color: red; ">VirtualBox 7.0.2以降</span>**の上で Lin4Neuro を動作させます。最新版の Lin4Neuro は、VirtualBox 7.0.2 で最適化されているため、前のバージョンのVirtualBoxを使用の方は**必ず7.0.2以降にアップグレードしてください。
 
 - [VirtualBoxのサイト](https://www.virtualbox.org/wiki/Downloads){:target="_blank"} から、ご自身のOSにあったVirtualBoxのインストーラーをダウンロードします
 
-- ダウンロードしたインストーラーを用いてVirtualBox 7.0 をインストールします
+- ダウンロードしたインストーラーを用いてVirtualBox 7.0.2 をインストールします
 
 - インストール後、VirtualBoxを起動します
 
