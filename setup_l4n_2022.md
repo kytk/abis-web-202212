@@ -62,7 +62,7 @@
 
         ![aria2c](img/win2204.png)
  
-    - macOS
+    - macOS (Intel mac)
 
         - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221028/l4n_mac.zip)をダウンロードします。Safariでダウンロードするとダウンロードフォルダにダウンロードされ、自動で展開されます。もし、自動で展開されない場合、ご自身でl4n_mac.zipを展開されてください。
 
