@@ -42,7 +42,7 @@
 
     - Windows 10/11
 
-        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_win.zip)をダウンロードします
+        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221028/l4n_win.zip)をダウンロードします
 
         - l4n_win.zip を展開します
 
@@ -64,7 +64,7 @@
  
     - macOS
 
-        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_mac.zip)をダウンロードします。Safariでダウンロードするとダウンロードフォルダにダウンロードされ、自動で展開されます。もし、自動で展開されない場合、ご自身でl4n_mac.zipを展開されてください。
+        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221028/l4n_mac.zip)をダウンロードします。Safariでダウンロードするとダウンロードフォルダにダウンロードされ、自動で展開されます。もし、自動で展開されない場合、ご自身でl4n_mac.zipを展開されてください。
 
         - ターミナルを起動します
 
