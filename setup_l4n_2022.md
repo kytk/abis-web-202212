@@ -11,7 +11,6 @@
     - [E. Lin4Neuroの起動 (5分)](#anchorE)
     - [参考. 仮想マシンの削除](#anchorF)
 - [問い合わせ](#anchor2)
-- [トラブルシューティング](#anchor3)
 
 <a id="anchor0"></a>
 
@@ -253,6 +252,6 @@
 
 - 準備がうまくいかない時のために、問い合わせフォームを準備しています。こちらからご質問ください。数日以内に担当者から返信させていただきます
 
-- [問い合わせフォーム](https://forms.gle/sCHfpjpMrdhcVaJE7){:target="_blank"} 
+- [問い合わせフォーム](https://forms.gle/NNCjrKn4uQJeYKdg6){:target="_blank"} 
 
 
