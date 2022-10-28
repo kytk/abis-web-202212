@@ -40,7 +40,7 @@
 
 - 分散ダウンロード(推奨): Lin4Neuroは30GBありますので、分散ダウンロードできるプログラムを準備してあります。自身の環境にあわせて以下の対処を行ってください。Lin4Neuroを30のファイルに分割してダウンロードします。ネットワークの環境にもよりますが、1ファイルあたり3〜5分程度かかりますので、ダウンロード終了に約2〜3時間かかるとお考えください。なお、2022年12月と2023年1月のチュートリアルで使用するLin4Neuroは同じです。
 
-    - Windows
+    - Windows 10/11
 
         - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_win.zip)をダウンロードします
 
@@ -64,7 +64,7 @@
  
     - macOS
 
-        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_mac.zip)をダウンロードします
+        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221026/l4n_mac.zip)をダウンロードします。Safariでダウンロードするとダウンロードフォルダにダウンロードされ、自動で展開されます。もし、自動で展開されない場合、ご自身でl4n_mac.zipを展開されてください。
 
         - ターミナルを起動します
 
