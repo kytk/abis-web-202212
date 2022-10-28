@@ -2,32 +2,15 @@
 # ABiS チュートリアル用スクリプト
 # 2022年12月, 2023年1月用のLin4Neuroを入手します
 
-#####
-# 準備のために使ったコマンド
-# cd ~/Documents/L4N-2204-ABIS-20221026
-# vm=L4N-2204-ABIS-20221026.ova
-# chmod 644 $vm
-# openssl md5 $vm > ${vm}.md5
-# split -n 30 -d ${vm} L4N-2204-ABIS-split-
-# for f in L4N-2204-ABIS-split-*; do openssl md5 $f > ${f}.md5; done
-#
-# sftp user@ftpsite
-# cd www/klab/l4n-abis
-# put L4N-2204-ABIS-20221026*
-# mkdir L4N-2204-ABIS-split
-# cd L4N-2204-ABIS-split
-# put L4N-2204-ABIS-split-*
-#####
-
 #For Debug
 #set -x
 
 # variable ################
-baseurl="https://www.nemotos.net/l4n-abis/L4N-2204-ABIS-split"
+baseurl="https://www.nemotos.net/l4n-abis/L4N-2204-ABIS-20221028-split"
 base="L4N-2204-ABIS-split"
-L4N="L4N-2204-ABIS-20221026.ova"
-L4Ndir="L4N-2204-ABIS-20221026"
-L4Nmd5="MD5(L4N-2204-ABIS-20221026.ova)= ded1b4e7852083459b7514db11545aad"
+L4N="L4N-2204-ABIS-20221028.ova"
+L4Ndir="L4N-2204-ABIS-20221028"
+L4Nmd5="MD5(L4N-2204-ABIS-20221028.ova)= 9fbc7eabf6ab90c0e78cdadc03c143dd"
 nfiles=29 # n-1
 ###########################
 
