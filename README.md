@@ -67,7 +67,7 @@
 の隣にあるアイコンから起動できます) から以下を実行して下さい
 
     ```
-    cd /media/sf_share
+    cd /opt/sf_share
     受講者仮決定メールに記されているコマンドをここにタイプします
     (セキュリティの都合でここには記しません)
     ```
@@ -75,11 +75,11 @@
 2. 更新する時: ターミナルから以下を実行してください
 
     ```
-    cd /media/sf_share/abis-202212
+    cd /opt/sf_share/abis-202212
     git pull
     ```
 
-- こうすると、`/media/sf_share/abis-202212` の下に "dti" "freesurfer" "intro" のフォルダが生成されます
+- こうすると、`/opt/sf_share/abis-202212` の下に "dti" "freesurfer" "intro" のフォルダが生成されます
 
 ## データの入手 (所要時間約1時間)
 
@@ -89,7 +89,7 @@
 - 上記のテキストの入手を行った後、ターミナルから以下をタイプしてください
 
     ```
-    cd /media/sf_share/abis-202212
+    cd /opt/sf_share/abis-202212
     ./get_data.sh
     ```
 
@@ -105,7 +105,7 @@
 - ターミナルから以下をタイプしてください
 
     ```
-    cd /media/sf_share/abis-202212
+    cd /opt/sf_share/abis-202212
     ./abis_test.sh
     ```
 
