@@ -42,7 +42,7 @@
 
     - Windows 10/11
 
-        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221028/l4n_win.zip)をダウンロードします
+        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221029/l4n_win.zip)をダウンロードします
 
         - l4n_win.zip を展開します
 
@@ -62,11 +62,11 @@
 
         ![aria2c](img/win2204.png)
 
-        - ダウンロードが完了すると、L4N-2204-ABIS-20221026 フォルダの中に L4N-2204-ABIS-20221026.ova というファイルが生成されます
+        - ダウンロードが完了すると、L4N-2204-ABIS-20221028 フォルダの中に L4N-2204-ABIS-20221028.ova というファイルが生成されます
  
     - macOS (Intel mac)
 
-        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221028/l4n_mac.zip)をダウンロードします。Safariでダウンロードするとダウンロードフォルダにダウンロードされ、自動で展開されます。もし、自動で展開されない場合、ご自身でl4n_mac.zipを展開されてください。
+        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202212/releases/download/v20221029/l4n_mac.zip)をダウンロードします。Safariでダウンロードするとダウンロードフォルダにダウンロードされ、自動で展開されます。もし、自動で展開されない場合、ご自身でl4n_mac.zipを展開されてください。
 
         - ターミナルを起動します
 
@@ -82,7 +82,7 @@
 
         ![分散ダウンロード](img/mac_get_l4n_5.png)
 
-        - ダウンロードが完了すると、L4N-2204-ABIS-20221026 フォルダの中に L4N-2204-ABIS-20221026.ova というファイルが生成されます
+        - ダウンロードが完了すると、L4N-2204-ABIS-20221028 フォルダの中に L4N-2204-ABIS-20221028.ova というファイルが生成されます
  
 
 - 一括ダウンロード: 十分にネットワークが安定している方は、以下からダウンロードしてください。30GBありますのでダウンロードには2〜3時間かかります。ネットワークが細い方は、上の分割ダウンロードを選択してください。分散ダウンロードの方がおそらく速いです
@@ -91,8 +91,8 @@
 
     - L4N-2204-ABIS-20221028.ovaのmd5値は、`9fbc7eabf6ab90c0e78cdadc03c143dd` になります。ファイルサイズの検証にお使いください
 
-        - macOSならば、`openssl md5 L4N-2204-ABIS-20221026.ova` で確認できます
-        - Windowsならば、PowerShellから、`Get-FileHash -Algorithm md5 L4N-2204-ABIS-20221026.ova` で確認できます
+        - macOSならば、`openssl md5 L4N-2204-ABIS-20221028.ova` で確認できます
+        - Windowsならば、PowerShellから、`Get-FileHash -Algorithm md5 L4N-2204-ABIS-20221028.ova` で確認できます
 
 <a id="anchorB"></a>
 
@@ -112,11 +112,11 @@
 
 ### C. Lin4Neuro仮想アプライアンスのインポート (所要時間約15分) 
 
-- ダウンロードした仮想アプライアンス (L4N-2204-ABIS-20221026.ova) を用いて仮想マシンをインポートします
+- ダウンロードした仮想アプライアンス (L4N-2204-ABIS-20221028.ova) を用いて仮想マシンをインポートします
 
 - VirtualBoxのメニューから **ファイル** → **仮想アプライアンスのインポート** を選択します
 
-- ファイルに、ダウンロードした **L4N-2204-ABIS-20221026.ova** を指定し、 **<kbd>次へ</kbd>** をクリックします
+- ファイルに、ダウンロードした **L4N-2204-ABIS-20221028.ova** を指定し、 **<kbd>次へ</kbd>** をクリックします 
 
     ![仮想アプライアンスのインポート](img/vb7_03.png)
 
