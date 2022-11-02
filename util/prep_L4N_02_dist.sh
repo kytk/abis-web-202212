@@ -2,7 +2,7 @@
 # Script to prepare split files of L4N for distribution
 
 ###
-splitbase="L4N-2004-ABIS-split-"
+splitbase="L4N-2204-ABIS-split-"
 ###
 
 
