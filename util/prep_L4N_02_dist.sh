@@ -1,6 +1,8 @@
 #!/bin/bash
 # Script to prepare split files of L4N for distribution
 
+set -x
+
 ###
 splitbase="L4N-2204-ABIS-split-"
 ###
