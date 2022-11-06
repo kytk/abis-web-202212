@@ -3,18 +3,17 @@
 
 set -x
 
-###
-splitbase="L4N-2204-ABIS-split-"
-###
 
-
-if [ $# -lt 1 ]; then
-  echo "Please specify ova files!"
-  echo "Usage: $0 OVA"
+if [ $# -lt 2 ]; then
+  echo "Please specify ova files and Ubuntu version!"
+  echo "Usage: $0 OVA 20|22"
   exit 1
 fi
 
 vm=$1
+ubuntuver=$2
+
+splitbase="L4N-${ubuntuver}-ABIS-split-"
 
 cd ~/Documents
 [ ! -d ${vm%.ova} ] && mkdir ~/Documents/${vm%.ova}
