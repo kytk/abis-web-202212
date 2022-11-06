@@ -6,7 +6,7 @@ set -x
 
 if [ $# -lt 2 ]; then
   echo "Please specify ova files and Ubuntu version!"
-  echo "Usage: $0 OVA 20|22"
+  echo "Usage: $0 OVA 2004|2204"
   exit 1
 fi
 
