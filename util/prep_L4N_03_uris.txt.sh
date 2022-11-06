@@ -13,9 +13,9 @@ fi
 wd=$1
 
 cat ${wd}/L4N-*-split-*.md5 > md5list.txt
-cp md5list.txt $modir
+cp md5list.txt $modir/l4n_win
 
-cd $modir
+cd $modir/l4n_win
 
 mv uris.txt uris.txt.old
 
