@@ -7,12 +7,12 @@ echo.
 aria2c -i uris.txt
 
 echo 分割ファイルを結合します
-copy /B L4N-2204-ABIS-split-?? L4N-2204-ABIS-20221103.ova
+copy /B L4N-2004-ABIS-split-?? L4N-2004-ABIS-20221106.ova
 
-echo 完了しました。L4N-2204-ABIS-20221103.ova をVirtualBoxにインポートしてください
+echo 完了しました。L4N-2004-ABIS-20221106.ova をVirtualBoxにインポートしてください
 echo 分割ファイルを削除します
 
-del L4N-2204-ABIS-split*
+del L4N-2004-ABIS-split*
 
 echo 終了します
 exit

@@ -6,11 +6,11 @@
 #set -x
 
 # variable ################
-baseurl="https://www.nemotos.net/l4n-abis/L4N-2204-ABIS-20221103-split"
-base="L4N-2204-ABIS-split"
-L4N="L4N-2204-ABIS-20221103.ova"
-L4Ndir="L4N-2204-ABIS-20221103"
-L4Nmd5="MD5(L4N-2204-ABIS-20221103.ova)= e758e458cbc1e3b3be9712a43da3baa3"
+baseurl="https://www.nemotos.net/l4n-abis/L4N-2004-ABIS-20221106-split"
+base="L4N-2004-ABIS-split"
+L4N="L4N-2004-ABIS-20221106.ova"
+L4Ndir="L4N-2004-ABIS-20221106"
+L4Nmd5="MD5(L4N-2004-ABIS-20221106.ova)= d864b459bc78cea8129a0d2adc32b73f"
 nfiles=29 # n-1
 ###########################
 
@@ -36,6 +36,8 @@ if [ ! -e ${L4N} ]; then
     while [ $? -ne 0 ]; do
       echo "ファイルサイズが一致しません"
       echo "再度ダウンロードします"
+      rm ${base}-${n}.md5 ${base}-${n}
+      curl -O ${baseurl}/${base}-${n}.md5
       curl -O ${baseurl}/${base}-${n}
       openssl md5 ${base}-${n} | cmp ${base}-${n}.md5 -
     done
