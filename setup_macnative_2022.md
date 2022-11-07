@@ -102,13 +102,15 @@ jupyter-notebook
 #### 確認
 - アプリケーションから AlizaMS を起動した後に、以下の画面になれば大丈夫です。
 
-画面
+![alizams起動画面](img/alizams0.png)
 
 #### 設定
 - AlizaMS のデフォルトはフォントサイズが9ポイントと小さいので、調整します。見た目も明るい色にします
 - 左上の"Application" -> "Settings" を選択します。
 - "Application" タブで、Theme を "Cleanlooks" とします。
 - 同様に、"Application" タブで、"12.0 pt" size for application font とフォントサイズを大きくします。
+
+![alizams設定](img/alizams.png)
 
 
 ### MRIcroGL
