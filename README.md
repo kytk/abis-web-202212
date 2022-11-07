@@ -63,7 +63,7 @@
 
 - チュートリアルでは、受講者にご自身でPCを準備して頂き、実際に操作しながらコマンドラインについて学んでいきます。PCのスペックについては、以下の **推奨条件** を参考にして下さい
 
-    - OS: Windows 10/11 64bit版 または macOS 10.14 (Mojave) - 12.6 (Monterey)
+    - OS: Windows 10/11 64bit版 または macOS 11.x (Big Sur) - 12.x (Monterey)
     - CPU: Intel Core i7/i9、Intel Core i5（クロック周波数2.0GHz以上）、または AMD Ryzen 5以上の性能を有するもの 
         - **注意: 現在、Apple M1/M2はVirtualBoxでLin4Neuroを動作できないため、チュートリアルで使用するソフトは個別にインストールしていただく必要があります。完全なサポートができないことをご承知おきください**
     - メモリ：8GB以上 (可能ならば16GB以上を推奨します)
