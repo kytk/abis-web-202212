@@ -96,7 +96,7 @@
 
     - [L4N-2004-ABIS-20221107.ovaのダウンロード](http://www.nemotos.net/l4n-abis/L4N-2004-ABIS-20221107.ova){:target="_blank"}
 
-    - L4N-2004-ABIS-20221107.ovaのmd5値は、`md5値` になります。ファイルサイズの検証にお使いください
+    - L4N-2004-ABIS-20221107.ovaのmd5値は、`deaed5cc9f97432e914c4d63cbdcaf11` になります。ファイルサイズの検証にお使いください
 
         - macOSならば、`openssl md5 L4N-2004-ABIS-20221107.ova` で確認できます
         - Windowsならば、PowerShellから、`Get-FileHash -Algorithm md5 L4N-2004-ABIS-20221107.ova` で確認できます
