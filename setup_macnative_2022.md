@@ -219,6 +219,8 @@
 
 - MRViewが起動すれば大丈夫です
 
+    ![mrview](img/mrview.png)
+
 ### 11. 3D Slicer
 
 #### 11.1. インストール
