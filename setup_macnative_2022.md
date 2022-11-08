@@ -219,7 +219,7 @@
 
 - MRViewが起動すれば大丈夫です
 
-    ![mrview](img/mrview.png)
+    <img src="img/mrview.png" width="30%">
 
 ### 11. 3D Slicer
 
