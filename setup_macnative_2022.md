@@ -109,7 +109,7 @@
 #### 設定(任意)
 - 見た目をmacOSに統一させます。上のメニューバーから、AlizaMS -> Preferences を選んだのち、"Application" を選びます。Themeを macOS とします
 
-    <img src="img/alizams1.png" width="60%">
+    <img src="img/alizams1.png" width="75%">
 
 ### MRIcroGL
 
