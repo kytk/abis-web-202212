@@ -12,7 +12,7 @@
 - octave
 - python3
 - Jupyter Notebook (bashとoctaveカーネル含む)
-- Mango
+- AlizaMS
 - MRIcroGL
 - XQuartz
 - FSL
@@ -61,12 +61,14 @@ octave --version
 ### Python3
 
 #### インストール
-- https://www.python.org/ から Python 3.10.8 をダウンロードしてインストールすることにより、Apple M1/M2でも Python が利用可能となります。(Python 3.11でもかまいません)
+- PythonもHomebrewで入れるのが簡単です。
 
-- https://www.python.org/ftp/python/3.10.8/python-3.10.8-macos11.pkg
+```
+brew install python3
+```
 
 #### 確認
-- ターミナルを起動し、以下をタイプしてください。Python 3.10.8 になっていれば大丈夫です
+- ターミナルを起動し、以下をタイプしてください。Python 3.10.8 以降であれば大丈夫です
 
 ```
 python3 --version
@@ -93,21 +95,28 @@ jupyter-notebook
 
 - WebブラウザにJupyterという画面が出ればOKです。そのページを消した後、Jupyter Notebookを起動したターミナルで、control + c を押すとJupyter Notebookのサーバーをシャットダウンできますので y を押してシャットダウンしてください
 
-### Mango
+### AlizaMS
 
 #### インストール
-- Mango は以下のリンクからインストーラーを入手できます
-- http://ric.uthscsa.edu/mango/downloads/mango_mac.zip
+- 以下のリンクからインストーラーを入手できます
+- https://github.com/AlizaMedicalImaging/AlizaMS/releases/download/v1.8.3/AlizaMS-1.8.3.dmg
 
 #### 確認
-- アプリケーションから Mango を起動し、License Agreementが出た後に Mango のメインメニューが出ればOKです
+- アプリケーションから AlizaMS を起動し、以下の画面が出れば大丈夫です
+
+![alizams0](img/alizams0.png)
+
+#### 設定(任意)
+- 見た目をmacOSに統一させます。上のメニューバーから、AlizaMS -> Preferences を選んだのち、"Application" を選びます。Themeを macOS とします
+
+![alizams1](img/alizams1.png)
 
 ### MRIcroGL
 
 #### インストール
 - MRIcroGL は以下のリンクからインストーラーを入手できます
 - https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
-- インストール後、以下のコマンドを実行し、.zprofileに設定を書き込みます。bashの方は.bash_profileに置き換えてください
+- インストール後、以下のコマンドを実行し、.bash_profileに設定を書き込みます
 
 ```
 echo '' >> ~/.bash_profile
@@ -128,8 +137,11 @@ dcm2niix --version
 - XQuartz は FSL の実行のために必要です
 
 #### インストール
-- 以下からインストーラーを入手し、実行します
-- https://github.com/XQuartz/XQuartz/releases/download/XQuartz-2.8.2/XQuartz-2.8.2.dmg
+- Homebrewが便利です
+
+```
+brew install --cask xquartz
+```
 
 #### 確認
 - FSLが実行されればXQuartzもきちんとインストールされるのでここでは確認しません
