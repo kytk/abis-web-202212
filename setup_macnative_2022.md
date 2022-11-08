@@ -219,7 +219,7 @@
 
 #### 11.1. インストール
 - 本家サイトのネットワークが非常に重いので、私のサイトにインストーラーを置きました。以下のリンクからダウンロードしてください
-- http://www.nemotos.net/l4n-abis/Slicer-5.0.3-macosx-amd64.dmg
+- https://www.nemotos.net/l4n-abis/Slicer-5.0.3-macosx-amd64.dmg
 - ダウンロードしたら他のソフトと同じようにインストールします
 
 #### 11.2. 確認
