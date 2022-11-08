@@ -108,7 +108,7 @@
 
 - WebブラウザにJupyterという画面が出ることを確認してください。さらに、右側の"New"を押して、"octave" "bash" というメニューがあることを確認してください。ページを消した後、Jupyter Notebookを起動したターミナルで、control + c を押すとJupyter Notebookのサーバーをシャットダウンできますので y を押してシャットダウンしてください
 
-    <img src=img/jupyter.png" width="80%">
+    <img src="img/jupyter.png" width="80%">
 
 ### 5. Heudiconv
 
