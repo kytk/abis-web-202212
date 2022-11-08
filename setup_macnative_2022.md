@@ -200,7 +200,7 @@
 
 これでFSLが立ち上がればOKです
 
-    ![fsl](img/fsl.png)
+    ![fsl_screenshot](img/fsl.png)
 
 ### 10. MRtrix3
 #### 10.1. インストール
