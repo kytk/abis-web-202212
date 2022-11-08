@@ -219,7 +219,7 @@
 
 - MRViewが起動すれば大丈夫です
 
-    <img src="img/mrview.png" width="30%">
+    <img src="img/mrview.png" width="40%">
 
 ### 11. 3D Slicer
 
@@ -230,6 +230,8 @@
 
 #### 11.2. 確認
 - インストール後、3D Slicerを起動します
+
+    <img src="img/slicer.png" width="40%">
 
 ### 12. FreeSurfer
 
