@@ -281,6 +281,8 @@
 
 - Freeviewが起動します。
 
+    <img src="img/freeview.png" width="30%">
+
 #### 12.3. 海馬解析のためのMCRをインストール
 
 - さらに、海馬解析のためのMCRをインストールします
