@@ -29,32 +29,32 @@
 #### インストール
 - Command line tools for Xcode のインストールにより git を使うことが可能となります
 
-```
-xcode-select --install
-```
+    ```
+    xcode-select --install
+    ```
 
 #### 確認
 - ターミナルから以下をタイプしていただき、バージョンが出力されれば大丈夫です
 
-```
-git --version
-```
+    ```
+    git --version
+    ```
 
 ### Octave
 
 #### インストール
-- Homebrew 経由でインストールするのが簡単です。Homebrewのインストールは各自調べてください
+- Homebrew 経由でインストールするのが簡単です。Homebrew自体のインストールは、https://brew.sh/index_ja をご覧ください
 
-```
-brew install octave
-```
+    ```
+    brew install octave
+    ```
 
 #### 確認
 - ターミナルから以下をタイプします
 
-```
-octave --version
-```
+    ```
+    octave --version
+    ```
 
 - GNU Octave, version 6.4.0 と表示されればOKです 
 
@@ -63,35 +63,35 @@ octave --version
 #### インストール
 - PythonもHomebrewで入れるのが簡単です。
 
-```
-brew install python3
-```
+    ```
+    brew install python3
+    ```
 
 #### 確認
 - ターミナルを起動し、以下をタイプしてください。Python 3.10.8 以降であれば大丈夫です
 
-```
-python3 --version
-```
+    ```
+    python3 --version
+    ```
 
 ### Jupyter Notebook および bash と octave のカーネル
 
 #### インストール
 - Pythonをインストールした後、以下を実行してください
 
-```
-pip3 install jupyter notebook
-pip3 install bash_kernel
-python3 -m bash_kernel.install
-pip3 install octave_kernel
-```
+    ```
+    pip3 install jupyter notebook
+    pip3 install bash_kernel
+    python3 -m bash_kernel.install
+    pip3 install octave_kernel
+    ```
 
 #### 確認
 - ターミナルから以下をタイプしてください
 
-```
-jupyter-notebook
-```
+    ```
+    jupyter-notebook
+    ```
 
 - WebブラウザにJupyterという画面が出ればOKです。そのページを消した後、Jupyter Notebookを起動したターミナルで、control + c を押すとJupyter Notebookのサーバーをシャットダウンできますので y を押してシャットダウンしてください
 
@@ -104,12 +104,12 @@ jupyter-notebook
 #### 確認
 - アプリケーションから AlizaMS を起動し、以下の画面が出れば大丈夫です
 
-![alizams0](img/alizams0.png)
+    ![alizams0](img/alizams0.png)
 
 #### 設定(任意)
 - 見た目をmacOSに統一させます。上のメニューバーから、AlizaMS -> Preferences を選んだのち、"Application" を選びます。Themeを macOS とします
 
-![alizams1](img/alizams1.png)
+    ![alizams1](img/alizams1.png)
 
 ### MRIcroGL
 
@@ -118,18 +118,18 @@ jupyter-notebook
 - https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
 - インストール後、以下のコマンドを実行し、.bash_profileに設定を書き込みます
 
-```
-echo '' >> ~/.bash_profile
-echo '#MRIcroGL' >> ~/.bash_profile
-echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
-```
+    ```
+    echo '' >> ~/.bash_profile
+    echo '#MRIcroGL' >> ~/.bash_profile
+    echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
+    ```
 
 #### 確認
 - 一度ターミナルを終了し、ターミナルを再度起動した後に、以下をタイプしてください
 
-```
-dcm2niix --version
-```
+    ```
+    dcm2niix --version
+    ```
 
 この結果が、v1.0.20220720 と表示されれば大丈夫です
 
@@ -139,31 +139,31 @@ dcm2niix --version
 #### インストール
 - Homebrewが便利です
 
-```
-brew install --cask xquartz
-```
+    ```
+    brew install --cask xquartz
+    ```
 
 #### 確認
 - FSLが実行されればXQuartzもきちんとインストールされるのでここでは確認しません
 
 ### FSL
 #### インストール
-- 以下をターミナルから実行し、fslinstaller.pyを入手し、実行します
+- 以下をターミナルから実行し、fslinstaller.pyを入手し、実行します。古いバージョンの fslinstaller.py は python3 に対応していないので、新しいバージョンを必ず入手してください
 
-```
-cd ~/Downloads
-curl -O https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py
-cd ~/Downloads
-python3 ./fslinstaller.py 
-```
+    ```
+    cd ~/Downloads
+    curl -O https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py
+    python3 fslinstaller.py 
+    ```
 
 - インストール完了後、FSLの設定は .profile に記載されます。これが終わったら一度ターミナルを終了し、再びターミナルを起動します
 
 #### 確認
 - ターミナルから以下をタイプします
-```
-fsl
-```
+
+    ```
+    fsl
+    ```
 
 これでFSLが立ち上がればOKです
 
@@ -171,16 +171,16 @@ fsl
 #### インストール
 - ターミナルから以下を実行します
 
-```
-sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/MRtrix3/macos-installer/master/install)"
-```
+    ```
+    sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/MRtrix3/macos-installer/master/install)"
+    ```
 
 #### 確認
 - ターミナルから以下を実行します
 
-```
-mrview
-```
+    ```
+    mrview
+    ```
 
 - MRViewが起動すれば大丈夫です
 
@@ -199,44 +199,43 @@ mrview
 ### SPM
 #### インストール
 - GitHub経由が便利です
-- ホームディレクトリの下に git というディレクトリを作成し、その下に spm12 をインストールすることとします
+- ホームディレクトリの下に spm12 をインストールすることとします
 
-```
-cd ~
-mkdir git #なければ作成
-git clone https://github.com/spm/spm12.git
-```
+    ```
+    cd ~
+    git clone https://github.com/spm/spm12.git
+    ```
 
 - さらにターミナルから以下を実行します
 
-```
-sudo xattr -r -d com.apple.quarantine ~/git/spm12
-sudo find ~/git/spm12 -name '*.mexmaci64' -exec spctl --add {} \;
-```
+    ```
+    sudo xattr -r -d com.apple.quarantine ~/spm12
+    sudo find ~/spm12 -name '*.mexmaci64' -exec spctl --add {} \;
+    ```
 
-- この後、Matlabのパス設定で、~/git/spm12 を指定してください
+- この後、Matlabのパス設定で、~/spm12 を指定してください
 
 #### 確認
 - Matlab から
 
-```
-spm
-```
+    ```
+    spm
+    ```
 
 とタイプし、SPMが起動すればOKです
 
 ### CONN
 #### インストール
-- CONNは 21.a を使用します
+- CONNは **21.a** を使用します
 - インストール方法は以下のリンクを参照してください
 - https://www.nemotos.net/?p=3873
 
 #### 確認
 - Matlabから
 
-```
-conn
-```
+    ```
+    conn
+    ```
 
 とタイプし、CONNが起動すればOKです
 
