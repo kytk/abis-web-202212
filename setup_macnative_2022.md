@@ -198,7 +198,7 @@
     fsl
     ```
 
-これでFSLが立ち上がればOKです
+- これでFSLが立ち上がればOKです
 
     ![fsl_screenshot](img/fsl.png)
 
