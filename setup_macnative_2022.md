@@ -5,13 +5,26 @@
 ## 前提条件
 
 - CPUは Intel でも Apple M1/M2 でも問いません
-- ターミナルはデフォルトの zsh でなく bash を使用することとします
+- ターミナルはデフォルトの zsh でなく bash を使用することとします。ターミナルから以下のようにタイプしてください
+
+    ```
+    echo $SHELL
+    ```
+
+- この結果が、/bin/bash でない方は、以下のコマンドをタイプしてください
+
+    ```
+    chsh -s /bin/bash
+    ```
+
+- この後、ターミナルを起動し直すと、bashに変わります。確認のためには、`echo $SHELL` を実行し、その結果が /bin/bash であることを確認してください。
 
 ## インストールが必要なソフトウェア
 - git
 - octave
 - python3
 - Jupyter Notebook (bashとoctaveカーネル含む)
+- Heudiconv
 - AlizaMS
 - MRIcroGL
 - XQuartz
@@ -56,7 +69,7 @@
     octave --version
     ```
 
-- GNU Octave, version 6.4.0 と表示されればOKです 
+- GNU Octave, version 7.2.0 と表示されればOKです(バージョンは重要ではありませんので、古くても大丈夫です)
 
 ### Python3
 
@@ -94,6 +107,24 @@
     ```
 
 - WebブラウザにJupyterという画面が出ればOKです。そのページを消した後、Jupyter Notebookを起動したターミナルで、control + c を押すとJupyter Notebookのサーバーをシャットダウンできますので y を押してシャットダウンしてください
+
+### Heudiconv
+
+#### インストール
+
+- ターミナルから以下をタイプしてください
+
+    ```
+    pip3 install heudiconv
+    ```
+
+#### 確認
+
+- ターミナルから以下をタイプしてください。0.11.6と出力されればOKです
+
+    ```
+    heudiconv --version
+    ```
 
 ### AlizaMS
 
@@ -190,6 +221,62 @@
 - 以下のリンクからインストーラーをダウンロードし、実行します
 - https://download.slicer.org/bitstream/62cc8ff3aa08d161a31c260a
 - インストール後、3D Slicerを起動します
+
+### FreeSurfer
+
+#### インストール
+
+- 以下でFreeSurfer 7.3.2のセットアップスクリプトが手に入ります。
+
+    ```
+    cd ~/Downloads
+    curl -O https://gitlab.com/kytk/fs-scripts/-/raw/master/fs_setup_7.3.2_mac.sh
+    bash fs_setup_7.3.2_mac.sh
+    ```
+
+- チュートリアルで使うスクリプト集も手に入れます。ホームディレクトリの下に git フォルダを作成し、その下に入手します。
+
+    ```
+    [ ! -d ~/git ] && mkdir ~/git
+    cd git
+    git clone https://gitlab.com/kytk/fs-scripts.git
+    ```
+
+- パスを設定します
+
+    ```
+    cd fs-scripts
+    bash addpath.sh
+    ```
+
+- こうすると、以下のように質問されます。
+
+    ```
+    Which OS are you using? Select number.
+    1) Linux
+    2) MacOS
+    3) quit 
+    ```
+
+- 2と入力し、Enterを押すと、パスが設定されます。
+
+#### 確認
+
+- ターミナルを新しく立ち上げた上で以下のコマンドをタイプしてください
+
+    ```
+    fs_check_install.sh
+    ```
+
+- Freeviewが起動します。
+
+#### 海馬解析のためのMCRをインストール
+
+- さらに、海馬解析のためのMCRをインストールします
+
+    ```
+    fs7_fl_mcr2019b.sh
+    ```
 
 
 ### Matlab
