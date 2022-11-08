@@ -12,7 +12,7 @@
 - octave
 - python3
 - Jupyter Notebook (bashとoctaveカーネル含む)
-- AlizaMS
+- Mango
 - MRIcroGL
 - XQuartz
 - FSL
@@ -56,17 +56,17 @@ brew install octave
 octave --version
 ```
 
-- GNU Octave, version x.x.x と表示されればOKです 
+- GNU Octave, version 6.4.0 と表示されればOKです 
 
 ### Python3
 
 #### インストール
-- https://www.python.org/ から Python 3.11.0 をダウンロードします。すでにPython3を使われている方ならあえてアップデートしなくても大丈夫です
+- https://www.python.org/ から Python 3.10.8 をダウンロードしてインストールすることにより、Apple M1/M2でも Python が利用可能となります。(Python 3.11でもかまいません)
 
-- https://www.python.org/ftp/python/3.11.0/python-3.11.0-macos11.pkg
+- https://www.python.org/ftp/python/3.10.8/python-3.10.8-macos11.pkg
 
 #### 確認
-- ターミナルを起動し、以下をタイプしてください。Apple M1/M2の方は、Python 3.10.8以降であれば大丈夫です
+- ターミナルを起動し、以下をタイプしてください。Python 3.10.8 になっていれば大丈夫です
 
 ```
 python3 --version
@@ -93,32 +93,21 @@ jupyter-notebook
 
 - WebブラウザにJupyterという画面が出ればOKです。そのページを消した後、Jupyter Notebookを起動したターミナルで、control + c を押すとJupyter Notebookのサーバーをシャットダウンできますので y を押してシャットダウンしてください
 
-### AlizaMS
+### Mango
 
 #### インストール
-- AlizaMS は以下のリンクからインストーラーを入手できます
-- https://github.com/AlizaMedicalImaging/AlizaMS/releases/download/v1.8.3/AlizaMS-1.8.3.dmg
+- Mango は以下のリンクからインストーラーを入手できます
+- http://ric.uthscsa.edu/mango/downloads/mango_mac.zip
 
 #### 確認
-- アプリケーションから AlizaMS を起動した後に、以下の画面になれば大丈夫です。
-
-![alizams起動画面](img/alizams0.png)
-
-#### 設定
-- AlizaMS のデフォルトはフォントサイズが9ポイントと小さいので、調整します。見た目も明るい色にします
-- 左上の"Application" -> "Settings" を選択します。
-- "Application" タブで、Theme を "Cleanlooks" とします。
-- 同様に、"Application" タブで、"12.0 pt" size for application font とフォントサイズを大きくします。
-
-![alizams設定](img/alizams.png)
-
+- アプリケーションから Mango を起動し、License Agreementが出た後に Mango のメインメニューが出ればOKです
 
 ### MRIcroGL
 
 #### インストール
 - MRIcroGL は以下のリンクからインストーラーを入手できます
 - https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
-- インストール後、以下のコマンドを実行し、.bash_profileに設定を書き込みます
+- インストール後、以下のコマンドを実行し、.zprofileに設定を書き込みます。bashの方は.bash_profileに置き換えてください
 
 ```
 echo '' >> ~/.bash_profile
