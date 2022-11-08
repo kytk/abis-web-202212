@@ -104,12 +104,12 @@
 #### 確認
 - アプリケーションから AlizaMS を起動し、以下の画面が出れば大丈夫です
 
-    <img src="alizams0.png" width="480">
+    <img src="alizams0.png" width="60%">
 
 #### 設定(任意)
 - 見た目をmacOSに統一させます。上のメニューバーから、AlizaMS -> Preferences を選んだのち、"Application" を選びます。Themeを macOS とします
 
-    <img src="alizams1.png" width="480">
+    <img src="alizams1.png" width="60%">
 
 ### MRIcroGL
 
