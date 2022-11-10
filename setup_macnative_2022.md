@@ -43,14 +43,34 @@
 - CONN
 
 ### 楽をしたい人のために
-- 以下で示す作業を全自動で行うスクリプトを準備しました
+- 以下で示す作業を半自動で行うスクリプトを準備しました
 - FreeSurferのライセンスだけ、https://surfer.nmr.mgh.harvard.edu/registration.html にアクセスして事前に入手し、ダウンロードフォルダに保存してください
+- AlizaMS, MRIcroGL, Slicer, MATLAB Runtime はダウンロードフォルダにある dmg ファイルを実行してそれぞれインストールしてください
 
-- Matlab が*ある*人のためのスクリプト
+#### Matlab が*ある*人のためのスクリプト
+- 以下のリンクを右クリックで名前をつけて保存から、ダウンロードフォルダに保存してください
 
+    - https://raw.githubusercontent.com/kytk/abis-web-202212/main/prep_mac_with_matlab.sh
 
-- Matlab が*ない*人のためのスクリプト
+- ターミナルから以下を実行してください
 
+    ```
+    cd ~/Downloads
+    bash prep_mac_with_matlab.sh
+    ```
+
+#### Matlab が*ない*人のためのスクリプト
+
+- 以下のリンクを右クリックで名前をつけて保存から、ダウンロードフォルダに保存してください
+
+    - https://raw.githubusercontent.com/kytk/abis-web-202212/main/prep_mac_without_matlab.sh
+
+- ターミナルから以下を実行してください
+
+    ```
+    cd ~/Downloads
+    bash prep_mac_without_matlab.sh
+    ```
 
 ### 1. git (バージョン指定なし)
 
