@@ -24,6 +24,9 @@ else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+echo '# Homebrew' >> ~/.bash_profile
+echo ‘eval “$(/opt/homebrew/bin/brew shellenv)”‘ >> ~/.bash_profile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # octave and python3
 echo "octave と python3 のインストール"
