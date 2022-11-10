@@ -4,7 +4,7 @@
 
 # xcode-select
 echo "xcode-select のインストール"
-chk_xcodeselect=$(basename $(which xcode-select))
+chk_xcodeselect=$(which xcode-select | awk -F/ '{ print $NF }')
 if [ ${chk_xcodeselect} != "xcode-select" ]; then
   echo "   xcode-select needs to be installed"
   echo "   Please follow the dialogue"
@@ -16,7 +16,7 @@ fi
 
 # Homebrew
 echo "Homebrewのインストール"
-chk_homebrew=$(basename $(which brew))
+chk_homebrew=$(which brew | awk -F/ '{ print $NF }')
 if [ "${chk_homebrew}" = "brew" ]; then
   echo "   Homebrew is installed"
 else
