@@ -43,12 +43,12 @@ pip3 install octave_kernel
 # AlizaMS
 echo "AlizaMS のダウンロード"
 cd ~/Downloads
-curl -O https://github.com/AlizaMedicalImaging/AlizaMS/releases/download/v1.8.3/AlizaMS-1.8.3.dmg
+curl -OL https://github.com/AlizaMedicalImaging/AlizaMS/releases/download/v1.8.3/AlizaMS-1.8.3.dmg
 
 
 # MRIcroGL
 echo "MRIcroGL のダウンロード"
-curl -O https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
+curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
 
 echo "#MRIcroGL" >> ~/.bash_profile
 echo '' >> ~/.bash_profile
