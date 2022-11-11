@@ -2,51 +2,75 @@
 
 # 2022年12月開催ABiSチュートリアル macOS native環境セットアップスクリプト
 
+function ask_install () {
+while true; do
+
+echo "$1 をインストールしますか？ (yes/no)"
+read answer 
+    case $answer in
+        [Yy]*)
+          echo "Begin installation."
+          break
+          ;;
+        [Nn]*)
+          echo "Abort installation."
+          exit 1
+          ;;
+        *)
+          echo -e "Please type yes or no. \n"
+          ;;
+    esac
+done
+}
+
 # xcode-select
-echo "xcode-select のインストール"
+echo "xcode-select がインストールされているか確認します"
 chk_xcodeselect=$(which xcode-select | awk -F/ '{ print $NF }')
 if [ ${chk_xcodeselect} != "xcode-select" ]; then
-  echo "   xcode-select needs to be installed"
-  echo "   Please follow the dialogue"
+  echo "   xcode-select のインストールが必要です"
+  echo "   ダイアログに従ってください"
   xcode-select --install
 else
-  echo "   xcode-select is installed"
+  echo "   xcode-select はすでにインストールされています"
 fi
 
 
 # Homebrew
-echo "Homebrewのインストール"
+echo "Homebrew がインストールされているか確認します"
 chk_homebrew=$(which brew | awk -F/ '{ print $NF }')
 if [ "${chk_homebrew}" = "brew" ]; then
-  echo "   Homebrew is installed"
+  echo "   Homebrew はインストールされています"
 else
-  echo "   Homebrew is to be installed"
+  echo "   Homebrew をインストールします"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  echo '# Homebrew' >> ~/.bash_profile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-echo '# Homebrew' >> ~/.bash_profile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # octave and python3
-echo "octave と python3 のインストール"
+echo "octave と python3 をインストールします"
 brew install octave python3 
 
+
 # Jupyter notebook
-echo "Jupyter notebook のインストール"
+echo "Jupyter notebook をインストールします"
 pip3 install jupyter notebook
 pip3 install bash_kernel
 python3 -m bash_kernel.install
 pip3 install octave_kernel
 
+
 # AlizaMS
-echo "AlizaMS のダウンロード"
+echo "AlizaMS をダウンロードします"
 cd ~/Downloads
 curl -OL https://github.com/AlizaMedicalImaging/AlizaMS/releases/download/v1.8.3/AlizaMS-1.8.3.dmg
 
 
 # MRIcroGL
-echo "MRIcroGL のダウンロード"
+echo "MRIcroGL をダウンロードします"
 curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
 
 echo "#MRIcroGL" >> ~/.bash_profile
@@ -55,18 +79,18 @@ echo '#MRIcroGL' >> ~/.bash_profile
 echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
 
 
-# Heudiconv
-echo "Heudiconv のインストール"
-pip3 install heudiconv
+# Heudiconv and pydicom
+echo "Heudiconv と Pydicom をインストールします"
+pip3 install heudiconv pydicom
 
 
 # tree 
-echo "tree のインストール"
+echo "tree をインストールします"
 brew install tree
 
 
 # XQuartz
-echo "XQuartz のインストール"
+echo "XQuartz をインストールします"
 brew install --cask xquartz
 
 
