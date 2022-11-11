@@ -31,6 +31,7 @@
 - AlizaMS
 - MRIcroGL
 - Heudiconv
+- Pydicom
 - tree
 - XQuartz
 - FSL
@@ -42,35 +43,18 @@
 - SPM
 - CONN
 
-### 楽をしたい人のために
+### 一括インストールスクリプト
 - 以下で示す作業を半自動で行うスクリプトを準備しました
 - FreeSurferのライセンスだけ、https://surfer.nmr.mgh.harvard.edu/registration.html にアクセスして事前に入手し、ダウンロードフォルダに保存してください
-- AlizaMS, MRIcroGL, Slicer, MATLAB Runtime はダウンロードフォルダにある dmg ファイルを実行してそれぞれインストールしてください
-
-#### Matlab が*ある*人のためのスクリプト
-- 以下のリンクを右クリックで名前をつけて保存から、ダウンロードフォルダに保存してください
-
-    - https://raw.githubusercontent.com/kytk/abis-web-202212/main/prep_mac_with_matlab.sh
-
+- 途中、何度もパスワードを聞かれますので、適宜進捗状況をご確認ください
 - ターミナルから以下を実行してください
 
     ```
     cd ~/Downloads
-    bash prep_mac_with_matlab.sh
+    curl -O https://raw.githubusercontent.com/kytk/abis-web-202212/main/setup_macnative.sh
+    bash setup_macnative.sh
     ```
 
-#### Matlab が*ない*人のためのスクリプト
-
-- 以下のリンクを右クリックで名前をつけて保存から、ダウンロードフォルダに保存してください
-
-    - https://raw.githubusercontent.com/kytk/abis-web-202212/main/prep_mac_without_matlab.sh
-
-- ターミナルから以下を実行してください
-
-    ```
-    cd ~/Downloads
-    bash prep_mac_without_matlab.sh
-    ```
 
 ### 1. git (バージョン指定なし)
 
@@ -204,9 +188,20 @@
     heudiconv --version
     ```
 
+### 8. PyDicom (バージョン指定なし)
 
-### 8. tree (バージョン指定なし)
 #### 8.1. インストール
+
+- ターミナルから以下をタイプしてください
+
+    ```
+    pip3 install pydicom
+    ```
+
+
+### 9. tree (バージョン指定なし)
+
+#### 9.1. インストール
 - tree は、ディレクトリ構造を表示するプログラムです
 - Homebrewで簡単にインストールできます
 - ターミナルから以下をタイプしてください
@@ -215,7 +210,7 @@
     brew install tree
     ```
 
-#### 8.2. 確認
+#### 9.2. 確認
 - ターミナルから以下をタイプしてください
 
     ```
@@ -225,22 +220,22 @@
 - ご自身がいるディレクトリの下にあるサブディレクトリが2階層まで表示されます
 
 
-### 9. XQuartz (2.8.2)
+### 10. XQuartz (2.8.2)
 - XQuartz は FSL の実行のために必要です
 
-#### 9.1. インストール
+#### 10.1. インストール
 - Homebrewが便利です
 
     ```
     brew install --cask xquartz
     ```
 
-#### 9.2. 確認
+#### 10.2. 確認
 - FSLが実行されればXQuartzもきちんとインストールされるのでここでは確認しません
 
 
-### 10. FSL (6.0.5.2)
-#### 10.1. インストール
+### 11. FSL (6.0.5.2)
+#### 11.1. インストール
 - 以下をターミナルから実行し、fslinstaller.pyを入手し、実行します。古いバージョンの fslinstaller.py は python3 に対応していないので、新しいバージョンを必ず入手してください
 
     ```
@@ -251,7 +246,7 @@
 
 - インストール完了後、FSLの設定は .profile に記載されます。これが終わったら一度ターミナルを終了し、再びターミナルを起動します
 
-#### 10.2. 確認
+#### 11.2. 確認
 - ターミナルから以下をタイプします
 
     ```
@@ -262,15 +257,15 @@
 
     <img src="img/fsl.png" width="30%">
 
-### 11. MRtrix3 (バージョン指定なし)
-#### 11.1. インストール
+### 12. MRtrix3 (バージョン指定なし)
+#### 12.1. インストール
 - ターミナルから以下を実行します
 
     ```
     sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/MRtrix3/macos-installer/master/install)"
     ```
 
-#### 11.2. 確認
+#### 12.2. 確認
 - ターミナルから以下を実行します
 
     ```
@@ -282,8 +277,8 @@
     <img src="img/mrview.png" width="40%">
 
 
-### 12. ANTs (バージョン指定なし)
-#### 12.1. インストール
+### 13. ANTs (バージョン指定なし)
+#### 13.1. インストール
 - ターミナルから以下を実行します
 
 ```
@@ -292,7 +287,7 @@ curl -O https://gitlab.com/kytk/shell-scripts/-/raw/master/ANTs_installer_macOS.
 bash ANTs_installer_macOS.sh
 ```
 
-#### 12.2. 確認
+#### 13.2. 確認
 - "ANTs is installed" "Please close and re-run the terminal to reflect PATH setting" と出たら、ターミナルを一度閉じて、再度ターミナルを開きます
 
 - ターミナルから以下を実行します
@@ -304,12 +299,12 @@ ANTS
 - "call ANTS or ANTS --help" と出れば大丈夫です
 
 
-### 13. FreeSurfer (7.3.2)
+### 14. FreeSurfer (7.3.2)
 
-#### 13.1. license.txt の入手
+#### 14.1. license.txt の入手
 - まだFreeSurferのライセンスをお持ちでない方は、https://surfer.nmr.mgh.harvard.edu/registration.html にアクセスし、必要事項を入力してください。license.txt を添付したメールがご自身のメールアドレスに送られてきますので、その license.txt を、ダウンロード フォルダにコピーしてください
 
-#### 13.2. インストール
+#### 14.2. インストール
 
 - 以下でFreeSurfer 7.3.2のセットアップスクリプトを入手し、インストールを実行します。
 
@@ -345,7 +340,7 @@ ANTS
 
 - 2と入力し、Enterを押すと、パスが設定されます。
 
-#### 13.3. 確認
+#### 14.3. 確認
 
 - ターミナルを新しく立ち上げた上で以下のコマンドをタイプしてください
 
@@ -357,7 +352,7 @@ ANTS
 
     <img src="img/freeview.png" width="40%">
 
-#### 13.4. 海馬解析のためのMCRをインストール
+#### 14.4. 海馬解析のためのMCRをインストール
 
 - さらに、海馬解析のためのMCRをインストールします
 
@@ -368,24 +363,24 @@ ANTS
 - 30分くらいかかると思いますがインストールされます
 
 
-### 14. 3D Slicer (5.0.3)
+### 15. 3D Slicer (5.0.3)
 
-#### 14.1. インストール
+#### 15.1. インストール
 - 本家サイトのネットワークが非常に重いので、別の場所にインストーラーを置きました。以下のリンクからダウンロードしてください
 - https://www.nemotos.net/l4n-abis/macOS/Slicer-5.0.3-macosx-amd64.dmg
 - ダウンロードしたら他のソフトと同じようにインストールします
 
-#### 14.2. 確認
+#### 15.2. 確認
 - インストール後、3D Slicerを起動します
 
     <img src="img/slicer.png" width="40%">
 
-### 15. SPM12 と CONN21.a : Matlab をお持ちの場合
+### 16. SPM12 と CONN21.a : Matlab をお持ちの場合
 - SPM と CONN はMatlabを持っているか持っていないかでインストールの方法が変わります。Matlab をお持ちでない方は、次の 16. SPM と CONN: Matlab をお持ちでない場合 に従ってセットアップをしてください
 
 - Apple M1/M2 は、Matlab R2020b 以降でないと動作しませんのでご注意ください
 
-#### 15.1. SPM12のインストール
+#### 16.1. SPM12のインストール
 - GitHub経由が便利です
 - ホームディレクトリの下に spm12 をインストールすることとします
 
@@ -403,7 +398,7 @@ ANTS
 
 - この後、Matlabのパス設定で、/Users/ご自分のユーザ名/spm12 を指定してください
 
-#### 15.2. SPM12の確認
+#### 16.2. SPM12の確認
 - Matlab から
 
     ```
@@ -412,7 +407,7 @@ ANTS
 
 とタイプし、SPMが起動すればOKです
 
-#### 15.3. CONN 21.a のインストール
+#### 16.3. CONN 21.a のインストール
 - 異なるバージョンを使うことができるように、ホームディレクトリの下に conn を作成し、その下に、conn21a をインストールすることにします
 
 - ターミナルで以下をタイプします
@@ -430,7 +425,7 @@ ANTS
 
 - その後、Matlab のパス設定で、/Users/ご自分のユーザ名/conn/conn21a を指定してください
 
-#### 15.3. CONN 21.a の確認
+#### 16.3. CONN 21.a の確認
 - Matlabから
 
     ```
@@ -440,11 +435,11 @@ ANTS
 とタイプし、CONNが起動すればOKです
 
 
-### 16. SPM12 と CONN21.a : Matlab をお持ちでない場合
+### 17. SPM12 と CONN21.a : Matlab をお持ちでない場合
 
 - チュートリアル用に SPM12 と CONN21.a を Matlab がなくても動作するようにスタンドアロン版を作成しました。以下に従ってセットアップを行ってください
 
-#### 16.1. Matlab Runtime R2020b の入手
+#### 17.1. Matlab Runtime R2020b の入手
 
 - ターミナルに以下を入力し、Matlab Runtime R2020b を入手します。Intel Mac, Apple M1 ともに共通です。
 
@@ -458,7 +453,7 @@ ANTS
 
 - InstallForMacOSX をダブルクリックします。**インストール先はデフォルトのまま変更しないでください**
 
-#### 16.2. SPM12 standalone のインストール
+#### 17.2. SPM12 standalone のインストール
 
 - 以下で SPM12 standalone を入手し、/opt の下にインストールします。
 
@@ -473,7 +468,7 @@ ANTS
 
 - 一度ターミナルを閉じます。
 
-#### 16.3. SPM12 standalone の確認
+#### 17.3. SPM12 standalone の確認
 
 - ターミナルを起動した後、spm と入力すればSPMが起動します
 
@@ -481,7 +476,7 @@ ANTS
     spm
     ```
 
-#### 16.4. CONN 21.a standalone のインストール
+#### 17.4. CONN 21.a standalone のインストール
 
 - CONN は以下の方法でインストールできます
 
@@ -496,7 +491,7 @@ ANTS
 
 - ターミナルを一度終了します
 
-#### 16.5. CONN 21.a standalone の確認
+#### 17.5. CONN 21.a standalone の確認
 
 - GUIとコマンドラインのどちらからも起動できます
 
