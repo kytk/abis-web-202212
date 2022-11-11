@@ -43,18 +43,6 @@
 - SPM
 - CONN
 
-### 一括インストールスクリプト
-- 以下で示す作業を半自動で行うスクリプトを準備しました
-- FreeSurferのライセンスだけ、https://surfer.nmr.mgh.harvard.edu/registration.html にアクセスして事前に入手し、ダウンロードフォルダに保存してください
-- 途中、何度もパスワードを聞かれますので、適宜進捗状況をご確認ください
-- ターミナルから以下を実行してください
-
-    ```
-    cd ~/Downloads
-    curl -O https://raw.githubusercontent.com/kytk/abis-web-202212/main/setup_macnative.sh
-    bash setup_macnative.sh
-    ```
-
 
 ### 1. git (バージョン指定なし)
 
@@ -504,3 +492,16 @@ ANTS
     ```
 
 
+### 一括インストールスクリプト
+- 以上で示した作業を半自動で行うスクリプトを準備しました
+- FreeSurferのライセンスだけ、https://surfer.nmr.mgh.harvard.edu/registration.html にアクセスして事前に入手し、ダウンロードフォルダに保存してください
+- 途中、何度もパスワードを聞かれますので、適宜進捗状況をご確認ください
+- ターミナルから以下を実行してください
+
+    ```
+    cd ~/Downloads
+    curl -O https://raw.githubusercontent.com/kytk/abis-web-202212/main/setup_macnative.sh
+    bash setup_macnative.sh
+    ```
+
+- ただし、これは個人の環境によって大きな差があるので、ご自身で解決できる方のみ使用されてください。初心者の方は、上の指示に従ってひとつずつインストールしてください
