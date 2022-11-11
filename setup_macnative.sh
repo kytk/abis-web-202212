@@ -260,6 +260,7 @@ function install_slicer () {
   if [ ! -e Slicer-5.0.3-macosx-amd64.dmg ]; then
     curl -O https://www.nemotos.net/l4n-abis/macOS/Slicer-5.0.3-macosx-amd64.dmg
   fi
+  hdiutil attach Slicer-5.0.3-macosx-amd64.dmg
   cd /Volumes/Slicer-5.0.3-macosx-amd64/
   cp -r Slicer.app Applications
   hdiutil detach /Volumes/Slicer-5.0.3-macosx-amd64
@@ -299,7 +300,7 @@ if [ ${chk_matlab} = "matlab" ]; then
   echo "セキュリティの問題を回避します。パスワードを入力してください"
   sudo xattr -r -d com.apple.quarantine ~/spm12
   sudo find ~/spm12 -name '*.mexmaci64' -exec spctl --add {} \;
-
+  fi
 
   # CONN 21.a
   echo "CONN 21a がインストールされているか確認します"
