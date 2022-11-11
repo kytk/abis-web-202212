@@ -90,9 +90,10 @@ else
   echo "   AlizaMS をインストールします"
   cd ~/Downloads
   [ ! -e AlizaMS-1.8.3.dmg ] && curl -OL https://github.com/AlizaMedicalImaging/AlizaMS/releases/download/v1.8.3/AlizaMS-1.8.3.dmg
-  open AlizaMS-1.8.3.dmg
+  hdiutil attach AlizaMS-1.8.3.dmg
   cd /Volumes/AlizaMS-1.8.3
   cp -r AlizaMS.app Applications
+  hdiutil detach /Volumes/AlizaMS-1.8.3
   hdiutil eject /Volumes/AlizaMS-1.8.3
 fi
 
@@ -102,10 +103,14 @@ fi
 function install_mricrogl () {
   echo "   MRIcroGL をダウンロードします"
   cd ~/Downloads
+  if [ -e MRIcroGL_macOS.dmg ]; then
+    rm MRIcroGL_macOS.dmg
+  fi
   curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
-  open MRIcroGL
+  hdiutil attach MRIcroGL
   cd /Volumes/MRIcroGL
   cp -r MRIcroGL.app Applications
+  hdiutil detach /Volumes/MRIcroGL
   hdiutil eject /Volumes/MRIcroGL
 }
 
@@ -321,7 +326,7 @@ else
       curl -O https://ssd.mathworks.com/supportfiles/downloads/R2020b/Release/8/deployment_files/installer/complete/maci64/MATLAB_Runtime_R2020b_Update_8_maci64.dmg.zip
     fi
     unzip MATLAB_Runtime_R2020b_Update_8_maci64.dmg.zip
-    open MATLAB_Runtime_R2020b_Update_8_maci64.dmg
+    hdiutil attach MATLAB_Runtime_R2020b_Update_8_maci64.dmg
     echo "   インストーラーのGUIが立ち上がります"
     echo "   デフォルト通りにインストールしてください" 
     /Volumes/MATLAB_Runtime_R2020b_Update_8_maci64/InstallForMacOSX.app/Contents/MacOS/InstallForMacOSX
