@@ -46,6 +46,7 @@ else
   echo '# Homebrew' >> ~/.bash_profile
   echo 'eval "$("$brewpath" shellenv)"' >> ~/.bash_profile
   eval "$("$brewpath" shellenv)"
+  fi
 fi
 
 # Reload ~/.bash_profile
