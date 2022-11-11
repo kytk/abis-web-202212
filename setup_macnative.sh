@@ -126,10 +126,13 @@ else
   echo "   MRIcroGLをインストールします"
   install_mricrogl
 
-  echo "   .bashrc に設定を記載します"
-  echo '' >> ~/.bash_profile
-  echo '#MRIcroGL' >> ~/.bash_profile
-  echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
+  echo "   .bashrc に記載がない場合、設定を記載します"
+  grep MRIcroGL ~/.bash_profile > /dev/null
+  if [ $? -eq 1 ]; then 
+    echo '' >> ~/.bash_profile
+    echo '#MRIcroGL' >> ~/.bash_profile
+    echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
+  fi
 fi
 
 
