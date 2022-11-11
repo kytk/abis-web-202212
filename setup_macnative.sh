@@ -94,6 +94,7 @@ else
   cd /Volumes/AlizaMS-1.8.3
   cp -r AlizaMS.app Applications
   hdiutil eject /Volumes/AlizaMS-1.8.3
+fi
 
 
 # MRIcroGL
@@ -115,7 +116,7 @@ else
   echo '' >> ~/.bash_profile
   echo '#MRIcroGL' >> ~/.bash_profile
   echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
-
+fi
 
 function install_mricrogl () {
   echo "   MRIcroGL をダウンロードします"
