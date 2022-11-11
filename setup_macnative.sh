@@ -15,6 +15,8 @@ else
   exit 1
 fi
 
+sleep 10
+
 
 # xcode-select
 echo "xcode-select がインストールされているか確認します"
@@ -26,6 +28,8 @@ if [ ${chk_xcodeselect} != "xcode-select" ]; then
 else
   echo "   xcode-select はすでにインストールされています"
 fi
+
+sleep 10
 
 
 # Homebrew
@@ -52,6 +56,9 @@ fi
 # Reload ~/.bash_profile
 source ~/.bash_profile
 
+sleep 10
+
+
 # octave
 echo "Octave がインストールされているか確認します"
 chk_octave=$(which octave | awk -F/ '{ print $NF }')
@@ -61,6 +68,8 @@ if [ ${chk_octave} != "octave" ]; then
 else
   echo "   Octave はすでにインストールされています"
 fi
+
+sleep 10
 
 
 # python3
@@ -73,6 +82,8 @@ else
   echo "   Python3 はすでにインストールされています"
 fi
 
+sleep 10
+
 
 # Jupyter notebook
 echo "Jupyter notebook 及び bash_kernel と octave_kernel をインストールします"
@@ -80,6 +91,8 @@ pip3 install jupyter notebook
 pip3 install bash_kernel
 python3 -m bash_kernel.install
 pip3 install octave_kernel
+
+sleep 10
 
 
 # AlizaMS
@@ -96,6 +109,8 @@ else
   sleep 10
   hdiutil detach /Volumes/AlizaMS-1.8.3
 fi
+
+sleep 10
 
 
 # MRIcroGL
@@ -136,11 +151,14 @@ else
   fi
 fi
 
+sleep 10
 
 
 # Heudiconv and pydicom
 echo "Heudiconv と Pydicom をインストールします"
 pip3 install heudiconv pydicom
+
+sleep 10
 
 
 # tree 
@@ -153,6 +171,8 @@ else
   echo "   tree はすでにインストールされています"
 fi
 
+sleep 10
+
 
 # XQuartz
 echo "XQuartz がインストールされているか確認します"
@@ -163,6 +183,8 @@ if [ ${chk_xquartz} != "xquartz" ]; then
 else
   echo "   Xquartz はすでにインストールされています"
 fi
+
+sleep 10
 
 
 # FSL
@@ -189,6 +211,8 @@ else
   fi
 fi
 
+sleep 10
+
 
 # MRtrix3
 echo "MRtrix3 がインストールされているか確認します"
@@ -199,6 +223,8 @@ if [ ${chk_mrtrix3} != "mrconvert" ]; then
 else
   echo "   MRtrix3 はすでにインストールされています"
 fi
+
+sleep 10
 
 
 # ANTs
@@ -213,6 +239,8 @@ else
   echo "   ANTs はすでにインストールされています"
 fi
 
+sleep 10
+
 
 # FreeSurfer 7.3.2
 echo "FreeSurfer 7.3.2 がインストールされているか確認します"
@@ -225,6 +253,8 @@ if [ ${chk_fs} != "freesurfer-darwin-macOS-7.3.2-20220804-6354275" ]; then
 else
   echo "   FreeSurfer 7.3.2 はインストールされています"
 fi
+
+sleep 10
 
 
 # fs-scripts
@@ -244,6 +274,7 @@ else
 fi
 
 # Reload ~/.bash_profile
+source ~/.bash_profile
 
 # FS7 MCRv97
 echo "MCR R2019b が FreeSurferにインストールされているか確認します"
@@ -253,6 +284,9 @@ else
   echo "   MCR R2019b をFS7のためにインストールします"
   ~/git/fs-scripts/fs7_dl_mcr2019b.sh
 fi
+
+sleep 10
+
 
 # Slicer
 
@@ -270,6 +304,9 @@ function install_slicer () {
 echo "Slicer がインストールされているか確認します"
 if [ ! -d /Applications/Slicer.app ]; then
   echo "   Slicer をインストールします"
+  echo "   英語のLicense Agreementが表示されるので、最後Enterを押して"
+  echo "   y をタイプしてください"
+  sleep 30
   install_slicer
 else
   echo "   Slicer のバージョンを確認します"
@@ -281,6 +318,8 @@ else
     install_slicer
   fi
 fi
+
+sleep 10
 
 
 #MATLAB
