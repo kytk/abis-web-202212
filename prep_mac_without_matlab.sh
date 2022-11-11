@@ -24,8 +24,8 @@ else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-cho '# Homebrew' >> ~/.bash_profile
-echo ‘eval “$(/opt/homebrew/bin/brew shellenv)”‘ >> ~/.bash_profile
+echo '# Homebrew' >> ~/.bash_profile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
