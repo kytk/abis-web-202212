@@ -93,6 +93,7 @@ else
   hdiutil attach AlizaMS-1.8.3.dmg
   cd /Volumes/AlizaMS-1.8.3
   cp -r AlizaMS.app Applications
+  sleep 10
   hdiutil detach /Volumes/AlizaMS-1.8.3
 fi
 
@@ -102,13 +103,13 @@ fi
 function install_mricrogl () {
   echo "   MRIcroGL をダウンロードします"
   cd ~/Downloads
-  if [ -e MRIcroGL_macOS.dmg ]; then
-    rm MRIcroGL_macOS.dmg
+  if [ ! -e MRIcroGL_macOS.dmg ]; then
+    curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
   fi
-  curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
   hdiutil attach MRIcroGL_macOS.dmg
   cd /Volumes/MRIcroGL
   cp -r MRIcroGL.app Applications
+  sleep 10
   hdiutil detach /Volumes/MRIcroGL
 }
 
