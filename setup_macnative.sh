@@ -170,6 +170,7 @@ else
   else
     echo "   FSLをアップデートします"
     install_fsl
+  fi
 fi
 
 function install_fsl () {
