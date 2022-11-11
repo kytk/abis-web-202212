@@ -94,7 +94,6 @@ else
   cd /Volumes/AlizaMS-1.8.3
   cp -r AlizaMS.app Applications
   hdiutil detach /Volumes/AlizaMS-1.8.3
-  hdiutil eject /Volumes/AlizaMS-1.8.3
 fi
 
 
@@ -107,11 +106,10 @@ function install_mricrogl () {
     rm MRIcroGL_macOS.dmg
   fi
   curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
-  hdiutil attach MRIcroGL
+  hdiutil attach MRIcroGL_macOS.dmg
   cd /Volumes/MRIcroGL
   cp -r MRIcroGL.app Applications
   hdiutil detach /Volumes/MRIcroGL
-  hdiutil eject /Volumes/MRIcroGL
 }
 
 echo "MRIcroGL がインストールされているか確認します"
@@ -261,7 +259,7 @@ function install_slicer () {
   fi
   cd /Volumes/Slicer-5.0.3-macosx-amd64/
   cp -r Slicer.app Applications
-  hdiutil eject /Volumes/Slicer-5.0.3-macosx-amd64
+  hdiutil detach /Volumes/Slicer-5.0.3-macosx-amd64
 }
 
 echo "Slicer がインストールされているか確認します"
@@ -288,28 +286,35 @@ if [ ${chk_matlab} = "matlab" ]; then
   echo "   Matlab はインストールされています"
 
   # SPM12
-  echo "   SPM12 をインストールします"
-  echo "   ホームディレクトリにspm12がある場合、spm12-oldとリネームします"
+  echo "   SPM12 がインストールされているか確認します"
   cd
-  if [ -d spm12 ]; then
-    mv spm12 spm12-old
-  fi
-  git clone https://github.com/spm/spm12.git
+  if [ -d ~spm12 ]; then
+    echo "   SPM12 はインストールされています"
+  else
+    git clone https://github.com/spm/spm12.git
    
+  echo "セキュリティの問題を回避します。パスワードを入力してください"
   sudo xattr -r -d com.apple.quarantine ~/spm12
   sudo find ~/spm12 -name '*.mexmaci64' -exec spctl --add {} \;
 
 
   # CONN 21.a
-  echo "CONN 21a をインストールします"
-  cd ~/Downloads
-  curl -O https://www.nitrc.org/frs/download.php/12426/conn21a.zip
-  mkdir conn21a
-  unzip conn21a.zip -d conn21a
-  cd conn21a
-  mv conn conn21a
-  [ ! -d ~/conn ] && mkdir ~/conn
-  cp -r conn21a ~/conn
+  echo "CONN 21a がインストールされているか確認します"
+  if [ -d ~/conn/conn21a ]; then
+    echo "   CONN 21a はインストールされています"
+  else
+    echo "CONN 21a をインストールします"
+    cd ~/Downloads
+    if [ ! -e conn21a.zip ]; then
+      curl -O https://www.nitrc.org/frs/download.php/12426/conn21a.zip
+    fi
+    mkdir conn21a
+    unzip conn21a.zip -d conn21a
+    cd conn21a
+    mv conn conn21a
+    [ ! -d ~/conn ] && mkdir ~/conn
+    cp -r conn21a ~/conn
+  fi
 
   echo "Matlabから、/Users/$USER/spm12 と /Users/$USER/conn/conn21a をパスに追加してください"
 
@@ -348,18 +353,23 @@ else
   fi  
   
   # CONN 21a 
-  echo "CONN 21a standalone をインストールします"
-  cd ~/Downloads
-  if [ ! -e conn21a_standalone_maci64_v99.zip ]; then
-    curl -O https://www.nemotos.net/l4n-abis/macOS/conn21a_standalone_maci64_v99.zip
-  fi
-  unzip conn21a_standalone_maci64_v99.zip -d /Applications/
+  echo "CONN 21a がインストールされているか確認します"
+  if [ -e /Applications/conn_standalone/conn.app ]; then
+    echo "   CONN 21aはインストールされています"
+  else
+    echo "CONN 21a standalone をインストールします"
+    cd ~/Downloads
+    if [ ! -e conn21a_standalone_maci64_v99.zip ]; then
+      curl -O https://www.nemotos.net/l4n-abis/macOS/conn21a_standalone_maci64_v99.zip
+    fi
+    unzip conn21a_standalone_maci64_v99.zip -d /Applications/
   
-  grep 'CONN 21.a' ~/.bash_profile > /dev/null
-  if [ $? -eq 1 ]; then
-    echo "" >> ~/.bash_profile
-    echo "# Alias for CONN 21.a" >> ~/.bash_profile
-    echo "alias conn='/Applications/conn21a_standalone/run_conn.sh /Applications/MATLAB/MATLAB_Runtime/v99'" >> ~/.bash_profile
+    grep 'CONN 21.a' ~/.bash_profile > /dev/null
+    if [ $? -eq 1 ]; then
+      echo "" >> ~/.bash_profile
+      echo "# Alias for CONN 21.a" >> ~/.bash_profile
+      echo "alias conn='/Applications/conn21a_standalone/run_conn.sh /Applications/MATLAB/MATLAB_Runtime/v99'" >> ~/.bash_profile
+    fi
   fi
 fi
 
