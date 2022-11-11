@@ -98,6 +98,17 @@ fi
 
 
 # MRIcroGL
+
+function install_mricrogl () {
+  echo "   MRIcroGL をダウンロードします"
+  cd ~/Downloads
+  curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
+  open MRIcroGL
+  cd /Volumes/MRIcroGL
+  cp -r MRIcroGL.app Applications
+  hdiutil eject /Volumes/MRIcroGL
+}
+
 echo "MRIcroGL がインストールされているか確認します"
 if [ -e /Applications/MRIcroGL.app/Contents/MacOS/MRIcroGL ]; then
   echo "   dcm2niix のバージョンを確認します"
@@ -118,15 +129,6 @@ else
   echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.bash_profile
 fi
 
-function install_mricrogl () {
-  echo "   MRIcroGL をダウンロードします"
-  cd ~/Downloads
-  curl -OL https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20220720/MRIcroGL_macOS.dmg
-  open MRIcroGL
-  cd /Volumes/MRIcroGL
-  cp -r MRIcroGL.app Applications
-  hdiutil eject /Volumes/MRIcroGL
-}
 
 
 # Heudiconv and pydicom
@@ -157,6 +159,13 @@ fi
 
 
 # FSL
+
+function install_fsl () {
+  cd ~/Downloads
+  curl -O https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py
+  python3 fslinstaller.py
+}
+
 echo "FSL がインストールされているか確認します"
 chk_fsl=$(which fsl | awk -F/ '{ print $NF }')
 if [ ${chk_fsl} != "fsl" ]; then
@@ -173,12 +182,6 @@ else
   fi
 fi
 
-function install_fsl () {
-  cd ~/Downloads
-  curl -O https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py
-  python3 fslinstaller.py
-}
-
 
 # MRtrix3
 echo "MRtrix3 がインストールされているか確認します"
@@ -194,7 +197,7 @@ fi
 # ANTs
 echo "ANTs がインストールされているか確認します"
 chk_ants=$(which ANTs | awk -F/ '{ print $NF }')
-if [ ${chk_ants} != "ants" ]; then
+if [ ${chk_ants} != "ANTs" ]; then
   echo "   ANTs をインストールします"
   cd ~/Downloads
   curl -O https://gitlab.com/kytk/shell-scripts/-/raw/master/ANTs_installer_macOS.sh
@@ -233,13 +236,29 @@ else
   git pull
 fi
 
+# Reload ~/.bash_profile
 
-# FS7 MCR R2019b
-echo "MCR R2019b をFS7のためにインストールします"
-~/git/fs-scripts/fs7_dl_mcr2019b.sh
-
+# FS7 MCRv97
+echo "MCR R2019b が FreeSurferにインストールされているか確認します"
+if [ -d $FREESURFER_HOME/MCRv97 ]; then
+  echo "   MCRv97はインストールされています"
+else 
+  echo "   MCR R2019b をFS7のためにインストールします"
+  ~/git/fs-scripts/fs7_dl_mcr2019b.sh
+fi
 
 # Slicer
+
+function install_slicer () {
+  cd ~/Downloads
+  if [ ! -e Slicer-5.0.3-macosx-amd64.dmg ]; then
+    curl -O https://www.nemotos.net/l4n-abis/macOS/Slicer-5.0.3-macosx-amd64.dmg
+  fi
+  cd /Volumes/Slicer-5.0.3-macosx-amd64/
+  cp -r Slicer.app Applications
+  hdiutil eject /Volumes/Slicer-5.0.3-macosx-amd64
+}
+
 echo "Slicer がインストールされているか確認します"
 if [ ! -d /Applications/Slicer.app ]; then
   echo "   Slicer をインストールします"
@@ -255,21 +274,11 @@ else
   fi
 fi
 
-function install_slicer () {
-  cd ~/Downloads
-  if [ ! -e Slicer-5.0.3-macosx-amd64.dmg ]; then
-    curl -O https://www.nemotos.net/l4n-abis/macOS/Slicer-5.0.3-macosx-amd64.dmg
-  fi
-  cd /Volumes/Slicer-5.0.3-macosx-amd64/
-  cp -r Slicer.app Applications
-  hdiutil eject /Volumes/Slicer-5.0.3-macosx-amd64
-}
-
 
 #MATLAB
 echo "Matlab がインストールされているか確認します"
 
-chk_matlab=$(find / Applications/MATLAB=R*/bin -name 'matlab' | head -n 1 | awk -F/ '{ print $NF }')
+chk_matlab=$(find / Applications/MATLAB_R*/bin -name 'matlab' 2>/dev/null | head -n 1 | awk -F/ '{ print $NF }')
 if [ ${chk_matlab} = "matlab" ]; then
   echo "   Matlab はインストールされています"
 
