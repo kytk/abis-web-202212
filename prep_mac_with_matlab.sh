@@ -25,7 +25,7 @@ else
 fi
 
 echo '# Homebrew' >> ~/.bash_profile
-echo ‘eval “$(/opt/homebrew/bin/brew shellenv)”‘ >> ~/.bash_profile
+echo 'eval “$(/opt/homebrew/bin/brew shellenv)”' >> ~/.bash_profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # octave and python3
