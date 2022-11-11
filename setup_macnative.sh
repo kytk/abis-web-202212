@@ -39,12 +39,17 @@ else
   echo "   Homebrew をインストールします"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+  if [ -e /usr/local/Homebrew/bin/brew ]; then
+    brewpath='/usr/local/Homebrew/bin/brew'
+  elif [ -e /opt/homebrew/bin/brew ]; then
+    brewpath='/opt/homebrew/bin/brew'
   echo '# Homebrew' >> ~/.bash_profile
-  echo 'eval "$(/usr/local/Homebrew/bin/brew shellenv)"' >> ~/.bash_profile
-  eval "$(/usr/local/Homebrew/bin/brew shellenv)"
+  echo 'eval "$("$brewpath" shellenv)"' >> ~/.bash_profile
+  eval "$("$brewpath" shellenv)"
 fi
-}
 
+# Reload ~/.bash_profile
+source ~/.bash_profile
 
 # octave
 echo "Octave がインストールされているか確認します"
