@@ -82,6 +82,15 @@ else
   echo "   Python3 はすでにインストールされています"
 fi
 
+echo "python に対してパスが通っているか確認します"
+which python > /dev/null
+if [ $? -eq 1 ]; then
+  echo "python を python3 にリンクします"
+  sudo ln -s -f /usr/local/bin/python3 /usr/local/bin/python
+else
+  echo "python で パスが通っています"
+fi
+
 sleep 10
 
 
