@@ -105,6 +105,30 @@
     python3 --version
     ```
 
+#### 3.3 python の確認
+- Monterey から python3 にはパスが通っても python にパスが通っていないことがありえます。これはMRtrix3 でエラーになりますので、確認します。
+- ターミナルから以下をタイプしてください
+
+    ```
+    which python
+    ```
+
+- これで何も出力が帰ってこない場合、以下をタイプしてください
+
+    ```
+    sudo ln -s -f /usr/local/bin/python3 /usr/local/bin/python
+    ```
+
+- この上で改めて以下をタイプしてください
+
+    ```
+    which python
+    ```
+
+- 今度は、`/usr/local/bin/python` と出力されるはずです
+
+
+
 ### 4. Jupyter Notebook および bash と octave のカーネル (バージョン指定なし)
 
 #### 4.1. インストール
