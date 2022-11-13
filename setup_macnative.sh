@@ -254,13 +254,13 @@ sleep 10
 # FreeSurfer 7.3.2
 echo "FreeSurfer 7.3.2 がインストールされているか確認します"
 chk_fs=$(recon-all --version)
-if [ ${chk_fs} != "freesurfer-darwin-macOS-7.3.2-20220804-6354275" ]; then
+if [ ${chk_fs} = "freesurfer-darwin-macOS-7.3.2-20220804-6354275" ]; then
+  echo "   FreeSurfer 7.3.2 はインストールされています"
+else
   echo "   FreeSurfer 7.3.2 をインストールします"
   cd ~/Downloads
   curl -O https://gitlab.com/kytk/fs-scripts/-/raw/master/fs_setup_7.3.2_mac.sh
   bash fs_setup_7.3.2_mac.sh
-else
-  echo "   FreeSurfer 7.3.2 はインストールされています"
 fi
 
 sleep 10
