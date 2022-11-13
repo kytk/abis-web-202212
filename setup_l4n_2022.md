@@ -111,9 +111,11 @@
 
 - ダウンロードしたインストーラーを用いてVirtualBox 7.0.2 をインストールします
 
-    - Windowsの方で、"VirtualBox 7.0.2 needs the Microsoft Visual C++ 2019 Redistributable Package" という画面が出る方がいます。この場合、Microsoft Visual C++ 再頒布可能パッケージをインストールする必要があります。この場合、一度、インストールを中止し、 https://aka.ms/vs/17/release/vc_redist.x64.exe をダウンロードして、Visual C++ 再頒布可能パッケージをインストールしてから、再度 VirtualBox 7.0.2 をインストールしてください
+    - Windowsの方で、"VirtualBox 7.0.2 needs the Microsoft Visual C++ 2019 Redistributable Package" という画面が出る方がいます
 
         ![vc++2019](img/vc2019.png)
+
+    - この場合、Microsoft Visual C++ 再頒布可能パッケージをインストールする必要があります。一度、VirtualBoxのインストールを中止し、 https://aka.ms/vs/17/release/vc_redist.x64.exe をダウンロードして、Visual C++ 再頒布可能パッケージをインストールしてから、再度 VirtualBox 7.0.2 をインストールしてください
 
 - インストール後、VirtualBoxを起動します
 
