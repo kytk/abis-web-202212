@@ -21,12 +21,12 @@ sleep 10
 # xcode-select
 echo "xcode-select がインストールされているか確認します"
 chk_xcodeselect=$(which xcode-select | awk -F/ '{ print $NF }')
-if [ ${chk_xcodeselect} != "xcode-select" ]; then
+if [ ${chk_xcodeselect} = "xcode-select" ]; then
+  echo "   xcode-select はすでにインストールされています"
+else
   echo "   xcode-select のインストールが必要です"
   echo "   ダイアログに従ってください"
   xcode-select --install
-else
-  echo "   xcode-select はすでにインストールされています"
 fi
 
 sleep 10
@@ -62,11 +62,11 @@ sleep 10
 # octave
 echo "Octave がインストールされているか確認します"
 chk_octave=$(which octave | awk -F/ '{ print $NF }')
-if [ ${chk_octave} != "octave" ]; then
+if [ ${chk_octave} = "octave" ]; then
+  echo "   Octave はすでにインストールされています"
+else
   echo "   Octave をインストールします"
   brew install octave
-else
-  echo "   Octave はすでにインストールされています"
 fi
 
 sleep 10
@@ -75,11 +75,11 @@ sleep 10
 # python3
 echo "Python3 がインストールされているか確認します"
 chk_python3=$(which python3 | awk -F/ '{ print $NF }')
-if [ ${chk_python3} != "python3" ]; then
+if [ ${chk_python3} = "python3" ]; then
+  echo "   Python3 はすでにインストールされています"
+else
   echo "   Python3 をインストールします"
   brew install python3
-else
-  echo "   Python3 はすでにインストールされています"
 fi
 
 echo "python に対してパスが通っているか確認します"
@@ -173,11 +173,11 @@ sleep 10
 # tree 
 echo "treeがインストールされているか確認します"
 chk_tree=$(which tree | awk -F/ '{ print $NF }')
-if [ ${chk_python3} != "tree" ]; then
+if [ ${chk_python3} = "tree" ]; then
+  echo "   tree はすでにインストールされています"
+else
   echo "   tree をインストールします"
   brew install tree
-else
-  echo "   tree はすでにインストールされています"
 fi
 
 sleep 10
@@ -186,11 +186,11 @@ sleep 10
 # XQuartz
 echo "XQuartz がインストールされているか確認します"
 chk_xquartz=$(which xquartz | awk -F/ '{ print $NF }')
-if [ ${chk_xquartz} != "xquartz" ]; then
+if [ ${chk_xquartz} = "xquartz" ]; then
+  echo "   Xquartz はすでにインストールされています"
+else
   echo "   Xquartz をインストールします"
   brew install --cask xquartz
-else
-  echo "   Xquartz はすでにインストールされています"
 fi
 
 sleep 10
@@ -206,10 +206,7 @@ function install_fsl () {
 
 echo "FSL がインストールされているか確認します"
 chk_fsl=$(which fsl | awk -F/ '{ print $NF }')
-if [ ${chk_fsl} != "fsl" ]; then
-  echo "   FSL をインストールします"
-  install_fsl
-else
+if [ ${chk_fsl} = "fsl" ]; then
   echo "   FSL のバージョンを確認します"
   fslversion=$(cat /usr/local/fsl/etc/fslversion)
   if [ $fslversion = 6.0.5.2:dc6f4207 ]; then
@@ -218,6 +215,9 @@ else
     echo "   FSLをアップデートします"
     install_fsl
   fi
+else
+  echo "   FSL をインストールします"
+  install_fsl
 fi
 
 sleep 10
@@ -226,11 +226,11 @@ sleep 10
 # MRtrix3
 echo "MRtrix3 がインストールされているか確認します"
 chk_mrtrix3=$(which mrconvert | awk -F/ '{ print $NF }')
-if [ ${chk_mrtrix3} != "mrconvert" ]; then
+if [ ${chk_mrtrix3} = "mrconvert" ]; then
+  echo "   MRtrix3 はすでにインストールされています"
+else
   echo "   MRtrix3 をインストールします"
   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/MRtrix3/macos-installer/master/install)"
-else
-  echo "   MRtrix3 はすでにインストールされています"
 fi
 
 sleep 10
@@ -239,13 +239,13 @@ sleep 10
 # ANTs
 echo "ANTs がインストールされているか確認します"
 chk_ants=$(which ANTs | awk -F/ '{ print $NF }')
-if [ ${chk_ants} != "ANTs" ]; then
+if [ ${chk_ants} = "ANTs" ]; then
+  echo "   ANTs はすでにインストールされています"
+else
   echo "   ANTs をインストールします"
   cd ~/Downloads
   curl -O https://gitlab.com/kytk/shell-scripts/-/raw/master/ANTs_installer_macOS.sh
   bash ANTs_installer_macOS.sh
-else
-  echo "   ANTs はすでにインストールされています"
 fi
 
 sleep 10
