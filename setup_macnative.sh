@@ -99,7 +99,7 @@ echo "Jupyter notebook 及び bash_kernel と octave_kernel をインストー�
 pip3 install jupyter notebook
 pip3 install bash_kernel
 python3 -m bash_kernel.install
-pip3 install octave_kernel
+python3 -m octave_kernel install --user
 
 sleep 10
 
