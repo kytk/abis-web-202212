@@ -86,7 +86,9 @@ echo "python に対してパスが通っているか確認します"
 which python > /dev/null
 if [ $? -eq 1 ]; then
   echo "python を python3 にリンクします"
-  sudo ln -s -f /usr/local/bin/python3 /usr/local/bin/python
+  py3path=$(which python3)
+  pypath=${py3path%3}
+  sudo ln -s -f $py3path $pypath
 else
   echo "python で パスが通っています"
 fi
