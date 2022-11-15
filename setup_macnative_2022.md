@@ -127,7 +127,24 @@
 - これで何も出力が帰ってこない場合、以下をタイプしてください
 
     ```
+    which python3
+    ```
+
+- この結果はおそらく、以下の2つのパターンです
+
+    - `/usr/local/bin/python3`
+    - `/opt/homebrew/bin/python3`
+
+- `/usr/local/bin/python3` の場合、以下をタイプしてください
+
+    ```
     sudo ln -s -f /usr/local/bin/python3 /usr/local/bin/python
+    ```
+
+- `/opt/homebrew/bin/python3` の場合、以下をタイプしてください
+
+    ```
+    sudo ln -s -f /opt/homebrew/bin/python3 /opt/homebrew/bin/python
     ```
 
 - この上で改めて以下をタイプしてください
@@ -136,7 +153,7 @@
     which python
     ```
 
-- 今度は、`/usr/local/bin/python` と出力されるはずです
+- 今度は、`/usr/local/bin/python` もしくは `/opt/homebrew/bin/python` と出力されるはずです
 
 
 
