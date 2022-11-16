@@ -161,8 +161,10 @@
 
 #### 4.1. インストール
 - Pythonをインストールした後、以下を実行してください
+- pip を最新化しないと octave_kernel が入らないことがあるので、最初に pip を最新化します
 
     ```
+    python3 -m pip install --upgrade pip
     pip3 install jupyter notebook
     pip3 install bash_kernel
     python3 -m bash_kernel.install
