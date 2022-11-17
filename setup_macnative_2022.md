@@ -332,16 +332,43 @@
 
 ### 13. ANTs (バージョン指定なし)
 #### 13.1. インストール
-- ターミナルから以下を実行します
+- ターミナルに以下をコピペします
+
+- intel macの場合
 
 ```
 cd ~/Downloads
-curl -O https://gitlab.com/kytk/shell-scripts/-/raw/master/ANTs_installer_macOS.sh
-bash ANTs_installer_macOS.sh
+curl -O https://www.nemotos.net/l4n-abis/macOS/ANTS_x64.zip
+unzip ANTS_x64.zip -d ~/
+grep '$HOME/ANTS/install/bin' ~/.bash_profile > /dev/null
+if [ $? -eq 1 ]; then
+  echo "" >> ~/.bash_profile
+  echo "#ANTs" >> ~/.bash_profile
+  echo 'export ANTSPATH=$HOME/ANTS/install/bin' >> ~/.bash_profile
+  echo 'export PATH=$PATH:$ANTSPATH' >> ~/.bash_profile
+fi
+
 ```
 
+- Apple M1/M2の場合
+
+```
+cd ~/Downloads
+curl -O https://www.nemotos.net/l4n-abis/macOS/ANTS_arm64.zip
+unzip ANTS_arm64.zip -d ~/
+grep '$HOME/ANTS/install/bin' ~/.bash_profile > /dev/null
+if [ $? -eq 1 ]; then
+  echo "" >> ~/.bash_profile
+  echo "#ANTs" >> ~/.bash_profile
+  echo 'export ANTSPATH=$HOME/ANTS/install/bin' >> ~/.bash_profile
+  echo 'export PATH=$PATH:$ANTSPATH' >> ~/.bash_profile
+fi
+
+```
+
+
 #### 13.2. 確認
-- "ANTs is installed" "Please close and re-run the terminal to reflect PATH setting" と出たら、ターミナルを一度閉じて、再度ターミナルを開きます
+- ターミナルを一度閉じて、再度ターミナルを開きます
 
 - ターミナルから以下を実行します
 
