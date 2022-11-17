@@ -244,11 +244,28 @@ chk_ants=$(which ANTs | awk -F/ '{ print $NF }')
 if [ ${chk_ants} = "ANTs" ]; then
   echo "   ANTs はすでにインストールされています"
 else
-  echo "   ANTs をインストールします"
-  cd ~/Downloads
-  curl -O https://gitlab.com/kytk/shell-scripts/-/raw/master/ANTs_installer_macOS.sh
-  bash ANTs_installer_macOS.sh
+  echo "   CPUの種類を確認します"
+  cpu=$(uname -m)
+  if [ $cpu = "x86_64" ]; then
+    echo "   CPUは x86_64 です"
+    cd ~/Downloads
+    curl -O https://www.nemotos.net/l4n-abis/macOS/ANTS_x64.zip
+    unzip ANTS_x64.zip -d ~/
+  elif [ $cpu = "arm64" ]; then
+    echo "   CPUは arm64 です"
+    cd ~/Downloads
+    curl -O https://www.nemotos.net/l4n-abis/macOS/ANTS_arm64.zip
+    unzip ANTS_arm64.zip -d ~/
+  fi
+  grep '$HOME/ANTS/install/bin' ~/.bash_profile > /dev/null
+  if [ $? -eq 1 ]; then
+    echo "" >> ~/.bash_profile
+    echo "#ANTs" >> ~/.bash_profile
+    echo 'export ANTSPATH=$HOME/ANTS/install/bin' >> ~/.bash_profile
+    echo 'export PATH=$PATH:$ANTSPATH' >> ~/.bash_profile
+  fi
 fi
+
 
 sleep 10
 
