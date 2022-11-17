@@ -168,7 +168,7 @@
     pip3 install jupyter notebook
     pip3 install bash_kernel
     python3 -m bash_kernel.install
-    python3 -m octave_kernel install --user
+    pip3 install octave_kernel
     ```
 
 #### 4.2. 確認
