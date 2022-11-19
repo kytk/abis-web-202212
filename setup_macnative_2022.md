@@ -9,6 +9,8 @@
 - [一括インストールスクリプト](#anchor4)
 - [問い合わせ](#anchor5)
 
+- **2022/11/19 追記** Surf Iceのインストールの案内が抜けていました。Surf Iceのインストールもよろしくお願いします。
+
 <a id="anchor0"></a>
 ## はじめに
 
@@ -44,6 +46,7 @@
 
 <a id="anchor2"></a>
 ## インストールが必要なソフトウェア
+- Surf Ice
 - git
 - octave
 - python3
@@ -65,6 +68,29 @@
 
 <a id="anchor3"></a>
 ## ソフトウェア毎のインストールおよび確認方法
+
+### 0. Surf Ice
+
+#### 0.1. インストール
+- 以下のリンクからダウンロードしてください
+
+- https://www.nemotos.net/l4n-abis/macOS/Surfice_mac-OS.dmg
+
+- ダウンロードしたら他のソフトと同じようにインストールします
+
+- アプリケーション -> Surfice -> surfice で実行します
+
+- そうすると、以下の画面が表示されます
+
+    ![surfice1](img/surfice_01.png)
+
+- アプリケーション -> Surfice -> sample -> mni152_2009.mz3 を指定します
+
+    ![surfice2](img/surfice_02.png)
+
+- そうすると、以下のように表示されます
+
+    ![surfice3](img/surfice_03.png)
 
 ### 1. git (バージョン指定なし)
 
