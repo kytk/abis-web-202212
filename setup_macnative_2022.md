@@ -74,7 +74,7 @@
 #### 0.1. インストール
 - 以下のリンクからダウンロードしてください
 
-- https://www.nemotos.net/l4n-abis/macOS/Surfice_mac-OS.dmg
+- https://www.nemotos.net/l4n-abis/macOS/Surfice_macOS.dmg
 
 - ダウンロードしたら他のソフトと同じようにインストールします
 
