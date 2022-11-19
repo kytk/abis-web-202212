@@ -82,15 +82,15 @@
 
 - そうすると、以下の画面が表示されます
 
-    ![surfice1](img/surfice_01.png)
+    <img src="img/surfice_01.png" width="50%">
 
 - アプリケーション -> Surfice -> sample -> mni152_2009.mz3 を指定します
 
-    ![surfice2](img/surfice_02.png)
+    <img src="img/surfice_02.png" width="70%">
 
 - そうすると、以下のように表示されます
 
-    ![surfice3](img/surfice_03.png)
+    <img src="img/surfice_03.png" width="50%">
 
 ### 1. git (バージョン指定なし)
 
