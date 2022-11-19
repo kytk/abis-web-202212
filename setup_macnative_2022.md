@@ -82,7 +82,7 @@
 
 - そうすると、以下の画面が表示されます
 
-    <img src="img/surfice_01.png" width="50%">
+    <img src="img/surfice_01.png" width="30%">
 
 - アプリケーション -> Surfice -> sample -> mni152_2009.mz3 を指定します
 
