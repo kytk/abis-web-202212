@@ -119,7 +119,7 @@
     git pull
     ```
 
-- こうすると、`~/git/abis/abis-202212` の下に `beginner`, `dti`, `dti2`, `freesurfer`, `textbook` のフォルダが生成されます
+- こうすると、`~/abis/abis-202212` の下に `beginner`, `dti`, `dti2`, `freesurfer`, `textbook` のフォルダが生成されます
 
 <a id="anchor2_4"></a>
 ### データの入手 (所要時間約1時間)
