@@ -82,11 +82,11 @@
 
     - 全部選べたら "Load" をクリックしてください
 
-    <img src="img/slicer_check_02.png" width="70%">
+    <img src="img/slicer_check_02.png" width="90%">
 
 - うまくいけば、以下のような図が表示されるはずです
 
-    <img src="img/slicer_check_03.png" width="70%">
+    <img src="img/slicer_check_03.png" width="90%">
  
 
 <a id="anchor5"></a>
