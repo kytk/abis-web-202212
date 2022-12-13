@@ -24,8 +24,8 @@
 
 - Windows の方はそのまま展開すると slicer_FS の中に slicer_FS フォルダができてしまいます。それを避けるために、slicer_FS.zip を右クリックし、「全て展開」を選んだ後、展開先を"C:\Users\ユーザー名\Desktop\" としてください
 
-    <img src="img/slicer_data_01.png" width="70%">
-    <img src="img/slicer_data_02.png" width="70%">
+    <img src="img/slicer_data_01.png" width="40%">
+    <img src="img/slicer_data_02.png" width="40%">
 
 
 <a id="anchor2"></a>
