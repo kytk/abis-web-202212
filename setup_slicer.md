@@ -18,7 +18,7 @@
 <a id="anchor1"></a>
 ## データのダウンロード
 
-- [こちらのリンク](http://www.nemotos.net/abis-data/abis-202212/slicer_FS.zip)を右クリックし、「名前をつけて保存」から、slicer_FS.zip をダウンロードしてください。皆の環境を統一するために、デスクトップに保存してください。iCloud Drive や OneDrive を有効にされている方は、一時的に、デスクトップが同期されないようにしていただいてもいいかもしれません。なお、そのリンクがだめな場合は、[別のリンク](https://www.dropbox.com/t/l6OzdnNE2xkUIpjM)からダウンロードしてください。
+- [こちらのリンク](https://www.nemotos.net/abis-data/abis-202212/slicer_FS.zip)を右クリックし、「名前をつけて保存」から、slicer_FS.zip をダウンロードしてください。皆の環境を統一するために、デスクトップに保存してください。iCloud Drive や OneDrive を有効にされている方は、一時的に、デスクトップが同期されないようにしていただいてもいいかもしれません。なお、そのリンクがだめな場合は、[別のリンク](https://www.dropbox.com/t/l6OzdnNE2xkUIpjM)からダウンロードしてください。
 
 - macOS の方はそのまま展開していただければ、slicer_FS のディレクトリができますので、それで準備完了です。
 
