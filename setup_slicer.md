@@ -58,6 +58,8 @@
 
 - インストールが終了すると、"Restart required" と画面左下に表示されますので、"Restart" でSlicerを再起動してください
 
+    <img src="img/slicer_05.png" width="70%">
+
 
 <a id="anchor4"></a>
 ## Slicer の確認
